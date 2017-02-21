@@ -45,6 +45,9 @@
         </div>
       </div>
     </div>
+    <div style="text-align: center">
+      <a class="googlexkbs" href="https://www.facebook.com/stagekiki/">Google X KBS</a>
+    </div>
   </div>
 </template>
 <script>
@@ -76,10 +79,10 @@
   }
 </script>
 <style>
-  @import url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/stylesheets/NotoSansKR-Hestia.css);
+  @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
   .swimming {
     position: absolute;
-    bottom: 0px;
+    bottom: -150px;
     right: 50vw;
     width: 92px;
     height: 127px;
@@ -131,6 +134,7 @@
     background-image: linear-gradient(#269 1px, transparent 1px), linear-gradient(90deg, #269 1px, transparent 1px);
     background-size: 25px 25px, 25px 25px;
     height: 100vh;
+    font-family: 'Noto Sans KR';
   }
 
   #water {
@@ -139,7 +143,7 @@
     width: 100vw;
     height: 120vh;
     background-position: top left;
-    bottom: 0px;
+    bottom: 0;
   }
 
   .loading-enter-active {
@@ -205,6 +209,20 @@
     background-image: url("/src/assets/img/you-s.png");
     width: 75px;
     height: 75px;
+  }
+
+  .googlexkbs {
+    position: absolute;
+    color: #0081C2;
+    letter-spacing: 0em;
+    line-height: 16px;
+    font-size: 13px;
+    font-weight: bold;
+    bottom: 10px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    text-decoration: none;
   }
 
   @media screen and (min-width: 60em) {

@@ -1,14 +1,17 @@
 <template>
   <div @click="show = !show" class="card">
-    <p class="summary"> {{summary}} </h2>
-    <p v-if="show">{{ description }}</p>
-    <span>{{where}}</span>
+    <div>
+      <div class="summary-button"> {{type}} </div>
+      <div class="summary"> {{summary}} </div>
+    </div>
+    <div class="description" v-if="show">{{ description }}</div>
+    <div class="where" v-if="!show">{{where}}</div>
     <a v-for="link in links" href="link">더 알아보기</a>
   </div>
 </template>
 <script>
   export default {
-    props: ['summary', 'description', 'where', 'links'],
+    props: ['summary', 'description', 'where', 'type', 'links'],
     data() {
       return {
         show: false
@@ -18,9 +21,24 @@
   }
 </script>
 <style>
+  @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+  .summary-button {
+    font-size: 15px;
+    padding: 0.2em 1em;
+    float: left;
+    color: black;
+    background-color: white;
+    border-radius: 14px;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: -0.02em;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.17);
+    margin-right: 1em;
+  }
+
   .card:focus,
   .card:hover {
-    background: #1978B9;
+    background: #0081C2;
     color: white
   }
 
@@ -33,12 +51,34 @@
     cursor: pointer;
     vertical-align: middle;
     margin-top: 10px;
-    background-color: #e1e7ea;
+    background-color: #EDEDED;
+    font-family: 'Noto Sans KR';
   }
 
   .summary {
-    display: inline-block;
-    font-size: 1.3em;
-    font-weight: 600;
+    display: block;
+    font-size: 19px;
+    line-height: 23px;
+    letter-spacing: -0.02em;
+    font-weight: 300;
   }
+
+  .description {
+    display: block;
+    font-size: 17.5px;
+    line-height: 26px;
+    letter-spacing: -0.03em;
+    font-weight: 200;
+    margin-top: 1em;
+  }
+
+  .where {
+    display: block;
+    font-size: 17.5px;
+    font-weight: 200;
+    letter-spacing: -0.03em;
+    line-height: 26px;
+    margin-top: 1em;
+  }
+
 </style>
