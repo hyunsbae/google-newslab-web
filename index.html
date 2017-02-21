@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>대통령 담그기</title>
+  <link rel="stylesheet" type="text/css" href="/src/assets/css/main.css">
+  <link rel="stylesheet" type="text/css" href="/src/assets/css/animate.css">
+  <script src="https://gstatic.com/firebasejs/3.5.2/firebase.js"></script>
+  <script src="https://unpkg.com/vuefire/dist/vuefire.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <transition enter-active-class="animated slideInLeft">
+      <router-view></router-view>
+    </transition>
+  </div>
+  <script src="/dist/build.js"></script>
+</body>
+
+</html>
