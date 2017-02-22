@@ -138,7 +138,7 @@
     background-image: linear-gradient(#0081C2 1px, transparent 1px), linear-gradient(90deg, #0081C2 1px, transparent 1px);
     background-size: 30px 30px, 30px 30px;
     min-width: 320px;
-    height: 100vh;
+    height: 80vh;
     font-family: 'Noto Sans KR';
   }
 
@@ -154,7 +154,7 @@
 
   @media all and (device-width: 375px) and (device-height: 667px) and (orientation:portrait) {
     #background {
-      height: 667px;
+      height: 500px;
     }
     #water {
       width: 375px;
@@ -164,7 +164,7 @@
 
   @media all and (device-width: 375px) and (device-height: 667px) and (orientation:landscape) {
     #background {
-      height: 667px;
+      height: 500px;
     }
     #water {
       width: 375px;
