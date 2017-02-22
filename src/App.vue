@@ -1,11 +1,9 @@
 <template>
-  <div id="background">
+  <div id="background" style="text-align: center">
     <transition name="loading">
       <div v-show="go" id="water"></div>
     </transition>
-    <transition name="late-loading">
-      <div class="swimming" v-if="show"></div>
-    </transition>
+    <div v-if="go" :class="{loading: true, 'yellow': colorChanged}">로딩중..</div>
     <div class="logo"></div>
     <div class="images">
       <div class="pool" @click.prevent="moveToCandidatePage">
@@ -45,9 +43,7 @@
         </div>
       </div>
     </div>
-    <div style="text-align: center">
-      <a class="googlexkbs" href="https://www.facebook.com/stagekiki/">Google X KBS</a>
-    </div>
+    <a class="googlexkbs" href="https://www.facebook.com/stagekiki/">Google X KBS</a>
   </div>
 </template>
 <script>
@@ -58,6 +54,7 @@
         selected: 'none',
         go: false,
         show: false,
+        colorChanged: false,
       }
     },
     methods: {
@@ -65,6 +62,9 @@
       moveToCandidatePage(event) {
         if (this.selected !== 'none') {
           this.go = true;
+          setTimeout(function (target) {
+            target = true;
+          }, 100, this.colorChanged);
           this.show = true;
           setTimeout(function (router, to) {
             console.log(to);
@@ -80,15 +80,20 @@
 </script>
 <style>
   @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
-  .swimming {
+  .yellow {
+    color: black;
+  }
+
+  .loading {
     position: absolute;
-    bottom: -150px;
-    right: 50vw;
-    width: 92px;
-    height: 127px;
-    margin: 0 auto;
-    background-image: url('/src/assets/img/tubejung-s.png');
-    z-index: 1000;
+    color: black;
+    font-size: 2em;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 20px;
   }
 
   .name {
@@ -133,6 +138,7 @@
     background-color: white;
     background-image: linear-gradient(#269 1px, transparent 1px), linear-gradient(90deg, #269 1px, transparent 1px);
     background-size: 25px 25px, 25px 25px;
+    min-width: 320px;
     height: 100vh;
     font-family: 'Noto Sans KR';
   }
@@ -144,6 +150,27 @@
     height: 120vh;
     background-position: top left;
     bottom: 0;
+  }
+
+  /* iphone7 */
+  @media all and (device-width: 375px) and (device-height: 667px) and (orientation:portrait) {
+    #background {
+      height: 667px;
+    }
+    #water {
+      width: 375px;
+      height: 800px;
+    }
+  }
+
+  @media all and (device-width: 375px) and (device-height: 667px) and (orientation:landscape) {
+    #background {
+      height: 667px;
+    }
+    #water {
+      width: 375px;
+      height: 800px;
+    }
   }
 
   .loading-enter-active {
@@ -166,7 +193,7 @@
   }
 
   .late-loading-enter-to {
-    bottom: 100vh !important;
+    top: 0 !important;
   }
 
   #ahn {

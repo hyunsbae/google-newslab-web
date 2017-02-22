@@ -9,7 +9,7 @@
       <a :class="{ 'active-button': selected===key, button: true} " v-for="(buttonText, key) in buttonTexts " @click="selected=key ">
         {{ buttonText }}
       </a>
-      <a class="button" href="http://stagekk.org/game ">문제니로 게임하기</a>
+      <a class="button" href="http://stagekk.org/game ">{{names[$route.params.name]}}</a>
     </div>
     <div class="policys">
       <template v-for="(value, key) in candidates[$route.params.name]">
@@ -22,12 +22,20 @@
   </div>
 </template>
 <script>
-
   import Card from './Card.vue'
   export default {
     data() {
       return {
         selected: 'all',
+        names: {
+          moon: '문제인으로 게임하기',
+          jung: '안희정으로 게임하기',
+          lee: '이재명으로 게임하기',
+          ahn: '안철수로 게임하기',
+          nam: '남경필로 게임하기',
+          you: '유승민으로 게임학기',
+          sim: '심상정으로 게임하기'
+        },
         keys: [
           'moon',
           'jung',
@@ -1095,7 +1103,7 @@
   }
 </script>
 <style lang="scss">
-@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+  @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
   .logo {
     position: fixed;
     width: 85px;
@@ -1170,7 +1178,7 @@
     font-size: 1.5em;
     font-weight: bold;
     bottom: 3.5em;
-    left: 1em;
+    left: 0.8em;
   }
 
   .bottom-text {
@@ -1182,7 +1190,7 @@
     font-size: 1.5em;
     font-weight: bold;
     bottom: 2em;
-    left: 1em;
+    left: 0.8em;
   }
 
   @media screen and (min-width: 45em) {
@@ -1217,52 +1225,24 @@
     }
     #backmoon {
       background-image: url('/src/assets/img/backmoon-l.png');
-      background-repeat: no-repeat;
-      position: relative;
-      width: 100vw;
-      height: 464px;
     }
     #backjung {
       background-image: url('/src/assets/img/backjung-l.png');
-      background-repeat: no-repeat;
-      position: relative;
-      width: 100vw;
-      height: 464px;
     }
     #backyou {
       background-image: url('/src/assets/img/backyou-l.png');
-      background-repeat: no-repeat;
-      position: relative;
-      width: 100vw;
-      height: 464px;
     }
     #backsim {
       background-image: url('/src/assets/img/backsim-l.png');
-      background-repeat: no-repeat;
-      position: relative;
-      width: 100vw;
-      height: 464px;
     }
     #backnam {
       background-image: url('/src/assets/img/backnam-l.png');
-      background-repeat: no-repeat;
-      position: relative;
-      width: 100vw;
-      height: 464px;
     }
     #backlee {
       background-image: url('/src/assets/img/backlee-l.png');
-      background-repeat: no-repeat;
-      position: relative;
-      width: 100vw;
-      height: 464px;
     }
     #backahn {
       background-image: url('/src/assets/img/backahn-l.png');
-      background-repeat: no-repeat;
-      position: relative;
-      width: 100vw;
-      height: 464px;
     }
   }
 
