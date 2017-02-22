@@ -148,7 +148,7 @@
     width: 100vw;
     height: 120vh;
     background-position: top left;
-    bottom: -200px;
+    bottom: -100px;
   }
   /* iphone7 */
 
