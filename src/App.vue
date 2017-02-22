@@ -7,6 +7,8 @@
     <div class="logo"></div>
     <div class="images">
       <div class="pool">
+        <div v-if="go" class="swimming">
+        </div>
       </div>
     </div>
     <div id="all">
@@ -85,6 +87,18 @@
     color: black;
   }
 
+  .swimming {
+    background-image: url('/src/assets/img/tubejung-m.png');
+    margin: auto;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 89px;
+    height: 134px;
+    margin-top: 40px;
+  }
+
   .loading {
     position: absolute;
     color: black;
@@ -126,6 +140,7 @@
     width: 85px;
     height: 85px;
     margin: 1em;
+    z-index: -1;
   }
 
   .images {
@@ -149,6 +164,7 @@
     height: 130vh;
     background-position: top left;
     bottom: -100px;
+    z-index: 1;
   }
   /* iphone7 */
 
@@ -249,6 +265,7 @@
     left: 0;
     right: 0;
     text-decoration: none;
+    z-index: 0;
   }
 
   @media screen and (min-width: 60em) {
