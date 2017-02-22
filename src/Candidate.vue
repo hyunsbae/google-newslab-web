@@ -1237,7 +1237,7 @@
     position: absolute;
     background-image: url('/src/assets/img/tubejung-s.png');
     bottom: 9em;
-    left: 0.8em;
+    left: 1.3em;
   }
 
   .top-text {
