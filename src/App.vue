@@ -1,7 +1,7 @@
 <template>
   <div id="background" style="text-align: center" @mouseup.prevent="moveToCandidatePage" @touchend.prevent="moveToCandidatePage" >
     <transition name="loading">
-      <div v-show="go" id="water"></div>
+      <div v-if="go" id="water"></div>
     </transition>
     <div v-if="go" :class="{loading: true, 'yellow': colorChanged}"></div>
     <div class="logo"></div>
