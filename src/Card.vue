@@ -4,9 +4,9 @@
       <div class="summary-button"> {{type}} </div>
       <div class="summary"> {{summary}} </div>
     </div>
-    <div class="description" v-if="show">{{ description }}</div>
+    <div class="description" v-if="show">{{ description }} <a class="links" v-for="(link, key, index) in links" :href="link">더보기</a>
+    </div>
     <div class="where" v-if="!show">{{where}}</div>
-    <a v-for="link in links" href="link">더 알아보기</a>
   </div>
 </template>
 <script>
@@ -71,6 +71,14 @@
     letter-spacing: -0.03em;
     font-weight: 300;
     margin-top: 1em;
+  }
+
+  .links {
+    font-size: 17.5px;
+    line-height: 26px;
+    letter-spacing: -0.03em;
+    font-weight: 300;
+    color: white;
   }
 
   .where {

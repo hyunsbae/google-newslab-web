@@ -15,7 +15,7 @@
       <template v-for="(value, key) in candidates[$route.params.name]">
         <transition-group name="custom" enter-active-class="animated fadeInLeft" tag="Card">
           <Card v-for="content in value" key="key" v-if="selected==='all' || selected===key" :summary="content.summary" :description="content.description"
-            :where="content.where" :type="content.type" />
+            :where="content.where" :type="content.type" :links="content.links"/>
         </transition-group>
       </template>
     </div>
@@ -82,38 +82,46 @@
               description: '대통령 직속 일자리 위원회를 만들어 대통령이 위원장을 맡고, 청와대에 일자리 상황실을 만들어 집무실에 현황판을 걸고 직접 일자리를 챙기겠다고 밝혔다. 구체적인 일자리 대책으로 ▲군 부사관과 복지 공무원, 소방관과 경찰 등 정부와 공공부문의 일자리 확충, ▲노동 시간 단축, ▲대기업과 중소기업, 정규직과 비정규직의 임금 격차를 줄이는 공정임금제 실시를 거듭 제시했다.',
               where: `대학생·청년 지지모임 '허니 MOON' 출범식 中 (2017.2)`,
               type: `발언`,
-              links: [`http://news.kbs.co.kr/news/view.do?ncd=3422959&ref=A`,
-                `http://news.kbs.co.kr/news/view.do?ncd=3413628&ref=A`
-              ],
+              links: {
+                kbs: `http://news.kbs.co.kr/news/view.do?ncd=3422959&ref=A`,
+                kbs2: `http://news.kbs.co.kr/news/view.do?ncd=3413628&ref=A`
+              },
             }, {
-              summary: `“131만 개의 일자리(81만 개 공공 일자리)를 창출하겠다”`,
+              summary: `“131만 개의 일자리(81만 개 공공 일자리)를 창출”`,
               description: `공공부문 일자리 확대(현재 7.6%인 일자리 비율을 3% 포인트 올려 공공부문 일자리 81만 개를 만들어낼 것)와 연장 노동을 포함한 노동시간을 주 52시간 이내로 규정한 법정 노동시간을 준수하여 130만 개+α의 일자리를 만들겠다고 공언했다. 공공부문 일자리 정책을 추진한 뒤 그 힘으로 민간부문까지 끌고 나갈 수 있는 사회적 대타협을 이끌겠다고 밝혔다`,
               where: `정책공간 국민성장 주최 일자리 정책포럼 (2017.1)`,
               type: `발언`,
-              links: [`http://news.kbs.co.kr/news/view.do?ncd=3414414&ref=A`,
-                `http://news.kbs.co.kr/news/view.do?ncd=3413956&ref=A`
-              ],
+              links: {
+                kbs: `http://news.kbs.co.kr/news/view.do?ncd=3414414&ref=A`,
+                kbs2: `http://news.kbs.co.kr/news/view.do?ncd=3413956&ref=A`
+              },
             }, {
               summary: `“공정임금제 실시할 것”`,
               description: `중소기업 노동자들의 임금을 대기업 노동자들의 80% 수준까지 끌어올리는 공정임금제를 실시하겠다고 밝혔다. 지난 10년간 늘어난 일자리의 92%를 창업 기업을 포함한 중소기업이 만들었는데, 중소기업 노동자들의 임금이 대기업 노동자의 60% 수준밖에 되지 않는 현실로 인해 청년들은 구직난을, 중소기업은 구인난을 겪고 있다는 이유에서다.`,
               where: `'국민성장 정책포럼' 일자리 정책 발표 중 (2017.01)`,
               type: `발언`,
 
-              links: [`http://news.kbs.co.kr/news/view.do?ncd=3422959&ref=A`],
+              links: {
+                kbs: `http://news.kbs.co.kr/news/view.do?ncd=3422959&ref=A`
+              },
             }, {
               summary: `"4년간 청년 일자리 71만 개 만들겠다 "`,
               description: `공공 일자리 34만 8천 개, 민간 37만 개 등 모두 71만 8천 개의 일자리를 창출하기 위한 방안을 제시했다. 청년 고용 할당제로 25만 2천 개의 일자리가, 노동시간을 주 52시간으로 단축함으로 인해 11만 8천 개가 창출되어 총 37만 개의 일자리를 만들어낼 수 있다고 밝혔다.`,
               where: `새정치 민주연합 당대표 ‘청년경제구상’ 내용 中 (2015.10)`,
               type: `발언`,
 
-              links: [`http://news.kbs.co.kr/news/view.do?ncd=3162517&ref=A`],
+              links: {
+                kbs: `http://news.kbs.co.kr/news/view.do?ncd=3162517&ref=A`
+              },
             }, {
               summary: `“매년 정원의 3% 이상씩 청년 미취업자 고용 의무화”`,
               description: `모든 공공기관과 지방공기업은 매년 정원의 3% 이상씩 청년 미취업자를 고용하도록 의무화하고, 이를 상시 고용하는 근로자 수 300명 이상의 민간기업까지 확대하여 적용한다. 청년 고용의무를 이행하지 아니한 사업주에게 고용부담금을 부과하고 고용의무를 이행한 사업주에게는 고용지원금을 지급하도록 한다.`,
               where: `청년고용할당제: 청년고용촉진 특별법 일부 개정 법률안 (19대 국회: 2012.11)`,
-              type: `법안 대표 발의`,
+              type: `법안`,
 
-              links: [`http://news.kbs.co.kr/news/view.do?ncd=2560759`],
+              links: {
+                kbs: `http://news.kbs.co.kr/news/view.do?ncd=2560759`
+              },
             }],
             university: [{
               summary: `“대학교 공동입학, 공동학위제 도입하겠다”`,
@@ -121,21 +129,23 @@
               where: `대담집 「대한민국이 묻는다」中 (2017.01)`,
               type: `발췌`,
 
-              links: [`http://www.mediapen.com/news/view/226581`],
+              links: {
+                mediapen: `http://www.mediapen.com/news/view/226581`
+              },
             }, {
               summary: `“반값 등록금, 대학 서열화 폐지 등을 기필코 이뤄내겠다”`,
               description: `지지자들과 질의응답하는 "반값 등록금, 대학 서열화 폐지 등을 기필코 이뤄내겠다"고 밝혔다. 2012년 18대 대선 공약으로 내세웠던 ▲‘등록금 상한제’ 도입으로 반값 등록금 실현, ▲‘고등교육재정 교부금 법’ 제정, ▲‘등록금 심의위원회’ 학생·교직원·전문가 참여 확대와 기능 강화, ▲저소득층 학생에게 국가장학금 지원 등의 연장 선상으로 해석된다. `,
               where: `포럼 대구경북 출범식 中 (2017.02)`,
               type: `발언`,
 
-              links: [`f`],
+              links: {},
             }, {
               summary: `“대학생 공공기숙사 확대하겠다”`,
               description: `2012년 18대 대선 후보 공약으로 ▲대학생용 전세임대주택과 공공 원룸텔 연 1만 호 공급 ▲대학별 자체 기숙사 신·증축 지원 확대 (대학 평가 및 재정 지원 연계) ▲국공유지 활용 공공기숙사 1만 호 공급 추진 등을 내놓았다.`,
-              where: `대학생 공공기숙사 확대 (2012)`,
-              type: `18대 대선 공약`,
+              where: `18대 대선 공약: 대학생 공공기숙사 확대 (2012)`,
+              type: `공약`,
 
-              links: [`f`],
+              links: {},
             }],
             rent: [{
               summary: `“부동산 보유세 인상해야”`,
@@ -143,30 +153,34 @@
               where: `대담집 「대한민국이 묻는다」 언론 인터뷰 中 (2017.01)`,
               type: `발언`,
 
-              links: [`f`],
+              links: {},
             }, {
               summary: `“전월세 피크제(상한제) 도입하겠다”`,
               description: `전월세 상승분을 지방자치단체와 협의해 결정하는 전월세 피크제(상한제)로 주거비 부담을 해소하겠다고 밝혔다. 전월세 피크제로 임대료 조정제가 실시되면 청년 주거안정에 실질적으로 큰 도움이 될 것이라며, ▲임대차 계약 갱신 청구권 신설 ▲지자체별로 적정 임대료를 산정하는 표준임대료 도입 ▲공공임대주택 비중 11%로 확대 등도 제안했다.`,
               where: `새정치 민주연합 당 대표 ‘청년경제구상’ 내용 中 (2015.10)`,
               type: `발언`,
 
-              links: [
-                `http://www.newsis.com/ar_detail/view.html/?ar_id=NISX20151011_0010342442&cID=10301&pID=10300`
-              ],
+              links: {
+                newsis: `http://www.newsis.com/ar_detail/view.html/?ar_id=NISX20151011_0010342442&cID=10301&pID=10300`
+              },
             }, {
               summary: `“공공임대주택 5만 호 공급하겠다”`,
               description: `셰어하우스형 공공임대주택 5만 호를 공급하여 청년의 주거권을 확보한다. 1인 기준 월세 30만 원 이하의 저렴한 임대료로 총 15만 명의 청년들에게 제공하며, 향후 구조변경 없이 신혼부부 등 다양한 계층에게 제공할 수 있어 비용을 최소화할 수 있는 주거 정책이라고 밝혔다. `,
               where: `새정치 민주연합 당 대표 ‘청년경제구상’ 내용 中 (2015.10)`,
               type: `발언`,
 
-              links: [`http://news.kbs.co.kr/news/view.do?ncd=3162326&ref=A`],
+              links: {
+                kbs: `http://news.kbs.co.kr/news/view.do?ncd=3162326&ref=A`
+              },
             }, {
               summary: `“청년 창업 위한 공공임대주택 확산 시킬 것”`,
               description: `창업 준비생에게 사무와 주거공간을 제공하는 공공임대주택을 정책으로 발전시켜 확산시켜 나가겠다고 말했다. `,
               where: `서울 성북구의 공공임대주택인 '도전숙'방문 中 (2015.10)`,
               type: `발언`,
 
-              links: [`http://news.kbs.co.kr/news/view.do?ncd=3164787&ref=A`],
+              links: {
+                kbs: `http://news.kbs.co.kr/news/view.do?ncd=3164787&ref=A`
+              },
             }],
             military: [{
               summary: `“군 복무 기간을 18개월로 단축할 수 있다”`,
@@ -174,14 +188,18 @@
               where: `대담집 ‘대한민국이 묻는다’ 출판기념회中 (2017.01)`,
               type: `발언`,
 
-              links: [`http://news.kbs.co.kr/news/view.do?ncd=3418202&ref=A`],
+              links: {
+                kbs: `http://news.kbs.co.kr/news/view.do?ncd=3418202&ref=A`
+              },
             }, {
               summary: `“종내에는 모병제로 가야 한다”`,
               description: `군대 기강이나 전투력은 억압으로 생기는 게 아니고, 자유분방한 병영생활 속에서 더 큰 단결력도 필요하기 때문에 모병제로 가야 된다고 주장했다. 사병 봉급 인상 등 군인 처우 개선과 관련해서는, “의무 복무라는 것은 국방 의무를 다하라는 것이지 그 기간에 노동력을 무상으로 제공하라는 뜻은 아니다"라며 군은 노동에 상응하는 급여를 지급해야 한다고 말했다.`,
               where: `'곰신 카페'(현역 장병의 여자친구 모임) 회원들과의 병영문화 개선 간담회 中 (2014.11)`,
               type: `발언`,
 
-              links: [`http://news.khan.co.kr/kh_news/khan_art_view.html?artid=201411231835131&code=910402`],
+              links: {
+                khan: `http://news.khan.co.kr/kh_news/khan_art_view.html?artid=201411231835131&code=910402`
+              },
             }],
             women: [{
               summary: `“워킹맘 근로시간 단축하겠다”`,
@@ -189,32 +207,36 @@
               where: `문재인의 SNS 게시글 中 (2017.1)`,
               type: `발언`,
 
-              links: [`https://www.facebook.com/moonbyun1/posts/1007678932671792`],
+              links: {
+                facebook: `https://www.facebook.com/moonbyun1/posts/1007678932671792`
+              },
             }, {
               summary: `“셋째부턴 국가가 대학 등록금까지 책임지겠다”`,
               description: `1월 일자리 공약을 발표한 뒤, 창업 이후 정규직 비율을 꾸준히 늘려온 한 제약회사를 방문해 다둥이 아빠와 워킹맘들을 만나, 네 아이를 키우는 아빠에겐 "셋째부턴 국가가 대학 등록금까지 책임지겠다"고 약속했다.`,
               where: `정규직 비율 꾸준히 늘려온 제약회사 방문 中 (2017.1)`,
               type: `발언`,
 
-              links: [`http://mbn.mk.co.kr/pages/news/newsView.php?category=mbn00006&news_seq_no=3122020`],
+              links: {
+                mbn: `http://mbn.mk.co.kr/pages/news/newsView.php?category=mbn00006&news_seq_no=3122020`
+              },
             }, {
               summary: ` "맞벌이 부모 10~16시 유연근무제"`,
               description: `자녀가 초등학교에 들어갈 때까지 부모가 어린이집이나 유치원을 보낸 이후 출근하고 아이가 돌아오기 전에 퇴근할 수 있게 일하는 시간을 단축하는 제도로, 근무시간을 오전 10시부터 오후 4시까지 임금 감소 없이 단축하고 유연근무제를 선택할 수 있게 해야 한다고 주장했다.`,
               where: `일·가정 양립 일자리 현장 ' 방문 中 (2017.2)`,
               type: `공약`,
 
-              links: [
-                `http://www.yonhapnews.co.kr/bulletin/2017/02/08/0200000000AKR20170208157400001.HTML?input=1195m`
-              ],
+              links: {
+                yonhap: `http://www.yonhapnews.co.kr/bulletin/2017/02/08/0200000000AKR20170208157400001.HTML?input=1195m`
+              },
             }, {
               summary: `"출산부터 보육까지 국가지원"`,
               description: `육아로 인한 경력단절 여성이 생기지 않도록 부부가 함께 육아를 할 수 있는 방안을 마련하겠다고 밝히며, ▲육아휴직수당 인상 ▲국공립 유치원 확충 ▲ 모범 일자리 기업 혜택 및 지원책 마련 ▲노동시간 단축 등의 공약을 내세웠다.`,
               where: `일·가정 양립 일자리 현장' 방문 中 (2017.02)`,
               type: `공약`,
 
-              links: [
-                `http://www.yonhapnews.co.kr/bulletin/2017/02/08/0200000000AKR20170208157400001.HTML?input=1195m`
-              ],
+              links: {
+                yonhap: `http://www.yonhapnews.co.kr/bulletin/2017/02/08/0200000000AKR20170208157400001.HTML?input=1195m`
+              },
             }],
           },
           jung: {
@@ -224,44 +246,52 @@
               where: `가톨릭 평화방송 라디오 <열린세상 오늘! 김성덕입니다>와의 인터뷰 中`,
               type: `발언`,
 
-              links: [`http://m.cpbc.co.kr/CMS/news/view_body.php?cid=669004&path=201701`],
+              links: {
+                cpbc: `http://m.cpbc.co.kr/CMS/news/view_body.php?cid=669004&path=201701`
+              },
             }, {
-              summary: `“동일노동 동일임금 법칙 확립”`,
+              summary: `“동일노동 동일임금 확립”`,
               description: `일자리의 질적 증가도 중요하지만, 기존의 일자리가 양질의 일자리로 전환하지 못하는 임금격차, 대기업 중심의 수직화된 이윤배분 구조를 깨는 것이 더 중요하다. 중소기업과 중견기업의 일자리가 젊은이들에게 선택될 수 있는 일자리가 안 되는 것을 해소해야 한다. 노동조합의 교섭력을 높여야 하고 중소기업의 독자적 기술력을 높여줘서 가격 협상력을 끌어올려야 한다. 정부가 할 일은 사회안전망과 소득재분배를 왕성하도록 돕는 것이다.`,
               where: `허핑턴포스트 인터뷰 中 (2017.02)`,
               type: `발언`,
 
-              links: [`http://www.huffingtonpost.kr/2017/02/03/story_n_14567640.html`],
+              links: {
+                huffingtonpost: `http://www.huffingtonpost.kr/2017/02/03/story_n_14567640.html`
+              },
             }, {
               summary: `“정부의 세금과 재정으로 만드는 일자리는 임시방편”`,
               description: `취업을 위해 노력하는 청년들을 지원하는 정책도 중요하지만, 본질적으로는 기업 등의 새로운 투자를 통해 일자리가 새로 만들어지도록 해야 한다. 경제민주화, 혁신 주도형, 노동 시장에 대한 정비, 적극적인 M&A 한계기업 구조조정 등을 통해 기업가들이 도전과 투자를 할 수 있도록 해줘야 한다.`,
-              where: `충청남도 대학생 아르바이트생들과의 오찬(2017.02) 中 & 허핑턴포스트 인터뷰 中 (2017.02)`,
+              where: `충청남도 대학생 아르바이트생들과의 오찬(2017.02)`,
               type: `발언`,
 
-              links: [`http://news.joins.com/article/21218734`,
-                `http://www.huffingtonpost.kr/2017/02/03/story_n_14567640.html`
-              ],
+              links: {
+                joins: `http://news.joins.com/article/21218734`,
+              },
             }, {
               summary: `“일할 능력이 있는 사람에게는 일자리가 복지”`,
               description: `일할 능력 있는 사람에게는 일자리로, 일할 능력이 없는 사람에게 복지 혜택을 집중해야 한다. 공교육 강화로 공공부문 일자리를 창출하고 근로시간 단축을 통해 일자리를 나누며, 일시적 노동시장 이탈자를 위해 실업급여, 육아휴직 급여 등 소득대체율과 상한액을 상향 조정하겠다`,
               where: `경기일보 인터뷰- [대선주자에게 듣는다] 안희정 충남지사 中 (2017.02)`,
               type: `발언`,
 
-              links: [`http://www.kyeonggi.com/?mod=news&act=articleView&idxno=1311912`],
+              links: {
+                kyeonggi: `http://www.kyeonggi.com/?mod=news&act=articleView&idxno=1311912`
+              },
             }, {
               summary: `“청년 창업 활성화”`,
               description: `구직에서 창직으로의 일자리 창출 패러다임을 변화하는 시도를 통해 청년 실업률을 낮추고, 도내 지식서비스 산업 육성 기반을 확충 ➜ 청년창업을 통한 신규 고용 창출 유도 및 지역 경제 활성화`,
               where: `청년 CEO 500프로젝트 (2015)`,
               type: `충남도정책`,
 
-              links: [`http://m.asiae.co.kr/view.htm?no=2013061208060144699#ba`],
+              links: {
+                asiae: `http://m.asiae.co.kr/view.htm?no=2013061208060144699#ba`
+              },
             }, {
               summary: `“중소기업 성장 지원”`,
               description: `중앙정부 및 전국 지자체의 창업 지원프로그램 중 기업 설립 후 3년 이내 지원프로그램이 없어 중소기업 단계까지 성장에 어려움을 겪는 것을 해소하고자, 창업 후 2~3년 이내의 기업을 대상으로 판로개척, 브랜드 인지도 제고 등을 통해 중소기업화 지원 ➜ 민선 6기 4년 동안 100개 기업 중소기업화 지원`,
               where: `작은 브랜드 100개 찾기 (청년창업) 프로젝트 (2015)`,
               type: `충남도정책`,
 
-              links: [``],
+              links: {},
             }],
             university: [{
               summary: `“반값등록금, 약속할 수 없다”`,
@@ -269,38 +299,44 @@
               where: `허핑턴포스트 인터뷰 中 (2017.02)`,
               type: `발언`,
 
-              links: [`http://www.huffingtonpost.kr/2017/02/03/story_n_14586886.html?utm_id=naver`],
+              links: {
+                huffingtonpost: `http://www.huffingtonpost.kr/2017/02/03/story_n_14586886.html?utm_id=naver`
+              },
             }, {
               summary: `“무작정 반값등록금보다, 교육환경 개선도 생각할 것”`,
               description: `교육 재정을 등록금 부담을 현재의 수준에서 더 떨어뜨리는 데 쓰는 것이 좋을지, 아니면 교수 확충과 시설 확충 등 대학 환경 개선에 쓰는 것이 더 좋은 것인지에 대해서 검토해 볼 필요가 있다.`,
               where: `충청남도 도민리포터 발대식 인터뷰中 (2011)`,
               type: `발언`,
 
-              links: [``],
+              links: {},
             }, {
-              summary: `“반값등록금과 대학 구조조정의 문제는 전 국가적 합의가 필요”`,
+              summary: `“반값등록금과 대학 구조조정의 문제는 국가적 합의 필요”`,
               description: `사립대학 경영이 어려운 현실에 놓여 있지만, 반값등록금과 대학구조조정 등의 대학문제는 여야 간 정쟁으로 비화되는 것이 아니라, 국가적으로 합의하여 신중하게 결정해야 하는 사안이다.`,
               where: `제10회 사립대학총장협의회中 (2013.04)`,
               type: `발언`,
 
-              links: [`https://news.unn.net/news/articleView.html?idxno=123457`],
+              links: {
+                unn: `https://news.unn.net/news/articleView.html?idxno=123457`
+              },
             }, ],
             rent: [{
-              summary: `“신혼부부‧학생‧일인 가구에게 임대 주택 공급”`,
+              summary: `“신혼부부,학생,일인 가구에게 임대 주택 공급”`,
               description: `정부의 주택정책과 연계하여, 서민 임대주택을 지속적으로 공급하고, 대학생, 사회 초년생, 신혼부부 등을 위한 행복주택을 건설했다.`,
-              where: `도민 수요 대응형 주택 및 임대주택 지속 공급 (2015)`,
-              type: `충남도정책`,
+              where: `충남도 정책: 도민 수요 대응형 주택 및 임대주택 지속 공급 (2015)`,
+              type: `정책`,
 
-              links: [`http://www.daejonilbo.com/news/newsitem.asp?pk_no=1129802`],
+              links: {
+                daejonilbo: `http://www.daejonilbo.com/news/newsitem.asp?pk_no=1129802`
+              },
             }, {
               summary: `“임대주택 주민들로부터 감사패”`,
               description: `2011년 주민연대 대표들과의 면담 후, 충청남도는 공공 건설 임대주택 관련 3개 법 개정에 적극 지원했다. 법 개정으로 임대 보증금과 주거권을 보호받을 수 있게 되자, 주민연대가 이에 대한 감사의 뜻을 전하기 위해 안희정 충남지사에게 감사패를 수여한 바 있다`,
               where: `전국 부도 공공 건설 임대주택 주민연대, 감사패 수여 (2013)`,
               type: `수상`,
 
-              links: [
-                `http://www.newsis.com/ar_detail/view.html/?ar_id=NISX20130813_0012285405&cID=10807&pID=10800`
-              ],
+              links: {
+                newsis: `http://www.newsis.com/ar_detail/view.html/?ar_id=NISX20130813_0012285405&cID=10807&pID=10800`
+              },
             }],
             military: [{
               summary: `“군 복무 단축은 표를 전제한 공약”`,
@@ -308,14 +344,18 @@
               where: `인천광역시청 브리핑룸에서 열린 출입기자 간담회中 (2017.01)`,
               type: `발언`,
 
-              links: [`http://news.kbs.co.kr/news/view.do?ncd=3413648`],
+              links: {
+                kbs: `http://news.kbs.co.kr/news/view.do?ncd=3413648`
+              },
             }, {
               summary: `“전시작전권 환수해야 한다”`,
               description: `“싸우면 이길 수 있는 군대를 갖춰야 한다"라며 남북 관계 개선, 동북아 평화 등에 주도적인 역할을 하기 위해서는 한국의 자위력이 갖춰져야 한다며 튼튼한 국방력을 강조했다. 우리나라의 독자적인 작전 능력 기회를 가져야 하며 미국에 지나치게 의존하는 것이 바람직하지 않기 때문에 전시작전권을 환수해야 하며, 우리의 국방 태세를 놓고 군 혁신을 하는 것이 먼저이지 복무 기간은 문제의 본질이 되어서는 안 된다고 덧붙였다.`,
               where: `광주에서 열린 지방의원 간담회 中 (2017.02)`,
               type: `발언`,
 
-              links: [`http://news.kbs.co.kr/news/view.do?ncd=3427371&ref=A`],
+              links: {
+                kbs: `http://news.kbs.co.kr/news/view.do?ncd=3427371&ref=A`
+              },
             }],
             women: [{
               summary: `“직장 내 친육아적인 인사제도를 정착시키겠다”`,
@@ -323,28 +363,32 @@
               where: `충남도청 공무원들과의 대화 中 (2017.01)`,
               type: `발언`,
 
-              links: [`http://news.kbs.co.kr/news/view.do?ncd=3420390&ref=A`],
+              links: {
+                kbs: `http://news.kbs.co.kr/news/view.do?ncd=3420390&ref=A`
+              },
             }, {
               summary: `“공공형·국공립 어린이집 비율을 확대하겠다”`,
               description: `현 국공립 어린이집 비율을 임기 중에 30%(공공형 포함), 중장기적으로 50%까지 확대하고, 현재 혜택을 받지 못하는 중소기업 직장어린이집은 설치 지원금을 확대해 혜택을 받도록 지원하며, 산업단지형 공동 직장어린이집 확대 방안도 마련하겠다고 밝혔다.`,
               where: `전자신문과의 인터뷰 中 (2017.02)`,
               type: `발언`,
 
-              links: [`http://www.etnews.com/20170212000047`],
+              links: {
+                etnews: `http://www.etnews.com/20170212000047`
+              },
             }, {
               summary: `“공공산후조리원 운영”`,
               description: `- 공공산후조리원 운영 활성화에 따른 Total Care 서비스 체계 구축 - 모자보건전문센터 설치로 산전·분만·산후관리 등 모자보건의료 서비스 제공`,
               where: `공공 산후조리원 운영 활성화 (2014)`,
               type: `충남 도정책`,
 
-              links: [``],
+              links: {},
             }, {
               summary: `“보육의 공공성 확보”`,
               description: `- 보육의 공공성 확보 및 질 좋은 보육서비스 제공 - 일․가정 양립을 위한 보육환경 조성으로 맞벌이 경제활동 지원`,
               where: `국공립 어린이집 및 직장어린이집 설치 확대 (2014)`,
               type: `충남 도정책`,
 
-              links: [``],
+              links: {},
             }],
           },
           lee: {
@@ -353,28 +397,36 @@
               description: `대선 출마 선언 공식 기자회견에서 ‘이재명식 뉴딜 성장 정책'으로 함께 잘 사는 경제를 만들 것이라며 ▲공정경제질서 회복, ▲임금 인상과 일자리 확대, ▲증세와 복지 확대, ▲가계소득 증대로 경제선 순환과 성장을 이루자는 것을 강조했다`,
               where: `대선 출마 선언 기자회견 (2017.01)`,
               type: `발언`,
-              links: [`http://news.kbs.co.kr/news/view.do?ncd=3416243&ref=A`],
+              links: {
+                kbs: `http://news.kbs.co.kr/news/view.do?ncd=3416243&ref=A`
+              },
             }, {
               summary: `“성과연봉제 폐지하겠다”`,
               description: `임금을 근속연수와 직급 기준이 아닌 1년 동안의 개인별 성과에 따라 차등을 두는 제도인 성과연봉제는 근로자 지위에 중대한 영향을 미치는 사안이지만, 노사 합의 없이 적용된 곳이 많다며, 대통령에 당선되면 성과연봉제 자체를 폐지하겠다고 확언했다.`,
               where: `본인 SNS에 게시 (2017.02)`,
               type: `발언`,
 
-              links: [`https://www.facebook.com/jaemyunglee/posts/1391314184243740`],
+              links: {
+                facebook: `https://www.facebook.com/jaemyunglee/posts/1391314184243740`
+              },
             }, {
-              summary: `“기본소득 통한 유효 수효 창출, 내수 진작으로 일자리 만들겠다”`,
+              summary: `“기본소득으로 유효 수효 창출, 내수 진작으로 일자리 창출”`,
               description: `아동·청소년·청년·노인·장애인·농어민에게 연 100만 원씩 지역화폐를 지급하는 기본소득제를 통해서 유효수요를 창출하고, 근로시간을 준수하고 연장근로수당을 지급하는 근로환경 정상화를 한다면 일자리를 269만 개 만들 수 있다고 주장했다.`,
               where: `대선 출마 선언 기자회견 (2017.01)`,
               type: `발언`,
 
-              links: [`http://news.kbs.co.kr/news/view.do?ncd=3426611&ref=A`],
+              links: {
+                kbs: `http://news.kbs.co.kr/news/view.do?ncd=3426611&ref=A`
+              },
             }, {
               summary: `“성남시 일자리 창출로 매니페스토 최우수상 수상”`,
               description: `다음과 같은 이유로 매니페스토 일자리 부분 최우수상을 수상한 바 있다. ▲시민 기업 104개 육성 ▲1,189명 일자리 창출 ▲공공부문 비정규직 607명 정규직 전환 ▲기업 유치와 벤처기업 1000개 돌파 ▲관급공사 14만 9485명 성남 시민 고용 ▲민간 건축공사장의 27만 2600명 성남 시민 고용 ▲기업과의 융합행정을 통한 다문화가정 여성의 일자리 창출 ▲일자리 공시 목표를 118% 초과 달성`,
-              where: `매니페스토 일자리 부분 “최우수상” 수상 (2012/2013)`,
-              type: `성남시 정책`,
+              where: `성남시 정책: 매니페스토 일자리 부분 “최우수상” 수상 (2012/2013)`,
+              type: `정책`,
 
-              links: [`http://www.kyeonggi.com/news/articleView.html?idxno=704162`],
+              links: {
+                kyeonggi: `http://www.kyeonggi.com/news/articleView.html?idxno=704162`
+              },
             }, ],
             university: [{
               summary: `“대학 등록금을 현재의 절반 수준으로”`,
@@ -382,35 +434,40 @@
               where: `대통령선거 출마 선언 中 발췌 (2017.1)`,
               type: `발언`,
 
-              links: [`http://news.kbs.co.kr/news/view.do?ncd=3416460&ref=A`,
-                `http://blog.naver.com/jaemyunglee/220922551567`
-              ],
+              links: {
+                kbs: `http://news.kbs.co.kr/news/view.do?ncd=3416460&ref=A`,
+                blog: `http://blog.naver.com/jaemyunglee/220922551567`
+              },
             }, {
               summary: `“공영형 사립대학 체제 구축해야”`,
               description: `“교육 양극화가 소득 양극화로 연결되지 않도록 해야 합니다. 우리 교육은 입시지옥, 대학 서열 체제, 공교육 황폐화라는 문제에 빠져 있습니다. ▲국공립대 네트워크를 구축하고, ▲공영형 사립대학 체제를 구축해 교육의 상향 평준화를 기하고, ▲대학 등록금을 현재의 절반 수준으로 낮추어야 합니다.” [공영형 사립대학이란?] 사립대학은 국가의 대학 운영경비에 대한 보조도 없고, 법인 전입금도 거의 없기 때문에 대학 운영경비의 상당 부분을 학생 등록금에 의존하는 형태를 띤다. 교육의 질을 높이기 위해 이를 공공적 형태로 변화시키는 것이 정부 책임형(공영형) 사립대학이라 할 수 있다.`,
               where: `대통령선거 출마 선언 中 발췌 (2017.1)`,
               type: `발언`,
 
-              links: [`http://www.kyosu.net/news/articleView.html?idxno=28886`,
-                `http://news.kbs.co.kr/news/view.do?ncd=3416460&ref=A`,
-                `http://blog.naver.com/jaemyunglee/220922551567`
-              ],
+              links: {
+                kyosu: `http://www.kyosu.net/news/articleView.html?idxno=28886`,
+                kbs: `http://news.kbs.co.kr/news/view.do?ncd=3416460&ref=A`,
+                blog: `http://blog.naver.com/jaemyunglee/220922551567`
+              },
             }, {
               summary: `“국공립대 네트워크 구축해야”`,
               description: `“교육 양극화가 소득 양극화로 연결되지 않도록 해야 합니다. 우리 교육은 입시지옥, 대학 서열 체제, 공교육 황폐화라는 문제에 빠져 있습니다. ▲국공립대 네트워크를 구축하고, ▲공영형 사립대학 체제를 구축해 교육의 상향 평준화를 기하고, ▲대학 등록금을 현재의 절반 수준으로 낮추어야 합니다.” [국공립대 네트워크란?] 서울대를 비롯한 전국 30개 국 공립대를 하나의 거대한 대학 체제로 묶어 공동 학위를 부여하는 제도다.`,
               where: `대통령선거 출마 선언 中 발췌 (2017.1)`,
               type: `발언`,
 
-              links: [`http://news.kbs.co.kr/news/view.do?ncd=3416460&ref=A`,
-                `http://blog.naver.com/jaemyunglee/220922551567`
-              ],
+              links: {
+                kbs: `http://news.kbs.co.kr/news/view.do?ncd=3416460&ref=A`,
+                blog: `http://blog.naver.com/jaemyunglee/220922551567`
+              },
             }, {
               summary: `“학자금 대출 이자, 성남시가 내준다”`,
               description: `대학생들의 학비 부담을 덜어주고 학업에 전념할 수 있도록 돕기 위한 학자금 대출 이자 지원 사업으로, 성남시는 지난 4년간 10억 7400만 원(2만 5891건)의 학자금 대출 이자를 지원했다.`,
               where: `대학생 학자금 대출이자 지원 (2013~)`,
               type: `성남시 정책`,
 
-              links: [`http://www.joongboo.com/?mod=news&act=articleView&idxno=1109443`],
+              links: {
+                joongboo: `http://www.joongboo.com/?mod=news&act=articleView&idxno=1109443`
+              },
             }, ],
             rent: [{
               summary: `“부동산 보유세 폐지하고 국토 보유세 신설하겠다”`,
@@ -418,16 +475,19 @@
               where: `백범기념관 정책콘서트 中 (2017.01)`,
               type: `발언`,
 
-              links: [`http://news.kbs.co.kr/news/view.do?ncd=3413739&ref=A`,
-                `http://factoll.com/page/news_view.php?Num=3912`
-              ],
+              links: {
+                kbs: `http://news.kbs.co.kr/news/view.do?ncd=3413739&ref=A`,
+                factoll: `http://factoll.com/page/news_view.php?Num=3912`
+              },
             }, {
               summary: `“’내 집 마련의 꿈’지원하는 주택 통장”`,
               description: `성남지역 저소득층의 주거복지 향상을 사업으로, 자활의지가 강한 차상위 근로자들의 자립 발판을 마련해주기 위해 성남시가 2011년부터 민간 후원금 29억 9400만 원으로 추진하는 사업이다. 성남지역 저소득 근로자 110명을 ‘성남형 주거복지 행복·드림통장 사업’ 대상으로 선정하여 매달 10만 원씩 3년간 저금하는 360만 원에 매달 10만 원씩 매칭 지원금이 적립돼 만기 후 720만 원 적립 원금과 이자를 주거 복지에 사용할 수 있도록 한다.`,
               where: `주거복지 행복·드림통장 사업 (2016)`,
               type: `성남시 정책`,
 
-              links: [`http://www.asiae.co.kr/news/view.htm?idxno=2016060207132880487`],
+              links: {
+                asiae: `http://www.asiae.co.kr/news/view.htm?idxno=2016060207132880487`
+              },
             }, ],
             military: [{
               summary: `“선택적 모병제 도입 필요”`,
@@ -435,16 +495,18 @@
               where: `국회 - '대한민국 적폐 청산과 공정국가 건설 토론회' 中 (2017.01)`,
               type: `발언`,
 
-              links: [`http://news.kbs.co.kr/news/view.do?ncd=3404878`],
+              links: {
+                kbs: `http://news.kbs.co.kr/news/view.do?ncd=3404878`
+              },
             }, {
               summary: `“현대전에 능한 스마트 강군 10만 양성”`,
               description: `현대전은 사병 숫자가 아니라 무기의 첨단화와 그 첨단화된 무기체계를 능수능란하게 다룰 수 있는 훈련된 병사가 좌우하기 때문에, 첨단 무기를 운용하는 정예 전투 요원 10만 명을 모병하면 징집병 20만 명으로도 군 전력을 강화할 수 있다.`,
               where: `공군 제3방공 유도탄 여단 예하 8630부대 방문 인터뷰 (2017.02)`,
               type: `발언`,
 
-              links: [
-                `http://www.yonhapnews.co.kr/bulletin/2017/02/13/0200000000AKR20170213109100061.HTML?input=1195m`
-              ],
+              links: {
+                yonhapnews: `http://www.yonhapnews.co.kr/bulletin/2017/02/13/0200000000AKR20170213109100061.HTML?input=1195m`
+              },
             }],
             women: [{
               summary: `“출산 부부 10년간 저가 임대주택 제공”`,
@@ -452,56 +514,72 @@
               where: `워킹맘들과 간담회 中 '아이 키우기 좋은 대한민국' 5대 공약 발표 (2017.02)`,
               type: `공약`,
 
-              links: [
-                `http://www.yonhapnews.co.kr/bulletin/2017/02/19/0200000000AKR20170219056100001.HTML?input=1195m`
-              ],
+              links: {
+                yonhap: `http://www.yonhapnews.co.kr/bulletin/2017/02/19/0200000000AKR20170219056100001.HTML?input=1195m`
+              },
             }, {
               summary: `“육아휴직 의무화 – 노동 경찰제 도입”`,
               description: `아이를 출산한 부모(남녀) 모두 육아휴직을 의무화하며, 육아휴직의 현실적 적용을 위해 아이를 키우는 부모 양측 모두 하루 8시간만 근무토록 하고 이를 감시·감독하는 '노동 경찰제' 도입하는 방안 등을 공약으로 내걸었다.노동 경찰제의 필요성에 대해서는 “근로시간이 잘 지켜지는지 등 노동법 관련 사항만 전담하는 노동 경찰이 필요하다"고 말했다.`,
               where: `워킹맘들과 간담회 中 '아이 키우기 좋은 대한민국' 5대 공약 발표 (2017.02)`,
               type: `공약`,
 
-              links: [
-                `http://www.yonhapnews.co.kr/bulletin/2017/02/19/0200000000AKR20170219056100001.HTML?input=1195m`
-              ],
+              links: {
+                yonhap: `http://www.yonhapnews.co.kr/bulletin/2017/02/19/0200000000AKR20170219056100001.HTML?input=1195m`
+              },
             }, {
               summary: `“공립 어린이집 이용률 50%로 확대”`,
               description: `누구나 어린이집을 이용할 수 있도록 공립 어린이집을 확대(이용률 11.4% → 50%) 하고 직장 어린이집 설치 감독을 강화해 설치율을 현행 53%에서 100%로 끌어올리겠다고 했다. 공공기관 직장 어린이집도 확대해 인근 직장 부모가 이용할 수 있도록 개방하겠다고도 약속했다.`,
               where: `워킹맘들과 간담회 中 '아이 키우기 좋은 대한민국' 5대 공약 발표 (2017.02)`,
               type: `공약`,
 
-              links: [`http://www.newsis.com/view/?id=NISX20170219_0014714979&cID=10201&pID=10200`],
+              links: {
+                newsis: `http://www.newsis.com/view/?id=NISX20170219_0014714979&cID=10201&pID=10200`
+              },
             }, {
               summary: `“누리과정 예산 전액 국고 부담”`,
               description: `보육의 질 향상을 위해 보육교사 처우를 개선하고 누리과정 예산을 전액 국고에서 부담하겠다고 말하며, ▲산후조리비 100만원 지원 ▲국민연금 출산 크레딧 첫째부터 적용 ▲육아휴직 급여 대체율 상향(현재 40% → 80%, 100만 원 상한 폐지) ▲18세 이하 입원 의료비 무상 지원 ▲고교 무상교육(2018년부터) ▲중고교 신입생 교복비 선물(1인당 29만 원) ▲아동과 청소년, 청년 배당(만 29세까지 연 100만 원) 등을 공약으로 제시했다.`,
               where: `워킹맘들과 간담회 中 '아이 키우기 좋은 대한민국' 5대 공약 발표 (2017.02)`,
               type: `공약`,
 
-              links: [`http://www.newsis.com/view/?id=NISX20170219_0014714979&cID=10201&pID=10200`],
+              links: {
+                newsis: `http://www.newsis.com/view/?id=NISX20170219_0014714979&cID=10201&pID=10200`
+              },
             }, {
               summary: `“’아이사랑 놀이터’로 공공 육아 실행”`,
               description: `성남시에는 장난감 도서관과 실내 놀이터를 합한 '아이사랑 놀이터'가 12곳, 65개의 국공립 어린이집, 학교 유휴공간을 이용해 맞벌이 가정 자녀를 돌보는 학교 내 시립 지역아동센터 등을 운영하며 공공 육아를 실현하고 있다.`,
               where: `이재명의 SNS 게시글 中 (2017.02)`,
               type: `발언`,
 
-              links: [`https://www.facebook.com/jaemyunglee1/posts/1387254304649986:0`],
+              links: {
+                facebook: `https://www.facebook.com/jaemyunglee1/posts/1387254304649986:0`
+              },
             }, {
               summary: `“무상 산후조리”`,
               description: `2018년까지 수정·중원·분당 등 3개구에 공공산후조리원을 설치하고 산모 1인당 2주간의 산후조리 서비스를 무상으로 제공하는 성남시 조례안이 제정됐다. 공공산후조리원을 이용하지 못할 경우 산모에게 1인당 50만 원의 조리비를 지원하고 매년 금액을 늘려 오는 2018년에는 최고 150만 원을 지원할 계획이다. 성남시는 이 조례가 시행되면 연간 7천여 명의 산모가 무상 산후조리 혜택을 누릴 것으로 예측했다.`,
-              where: `성남시 의회의 ‘무상 산후조리’ 조례안 (2015)`,
-              type: `성남시 정책`,
+              where: `성남시 정책: 의회의 ‘무상 산후조리’ 조례안 (2015)`,
+              type: `정책`,
 
-              links: [`http://news.kbs.co.kr/news/view.do?ref=A&ncd=3043493`],
+              links: {
+                kbs: `http://news.kbs.co.kr/news/view.do?ref=A&ncd=3043493`
+              },
             }, ],
           },
           ahn: {
             job: [{
-              summary: `“교육 혁명과 공정한 산업구조 개혁 통해 민간 일자리 창출”`,
-              description: `“4차 산업혁명 시대에는 인공지능, 로봇의 발전과 함께 지식정보산업과 관련된 일자리들이 늘어날 것이다. 정부는 이 시대를 대비한 교육혁명을 이뤄내고, 인재 양성과 과학기술혁명을 통한 기반기술 확보, 공정한 경쟁이 가능한 산업구조 개혁 등을 통해 양질의 일자리들을 만들어질 수 있다. 기업과 민간이 만드는 일자리 중심에 정부는 사회적 약자를 위한 일자리를 만드는 작업을 병행해야 한다.”`,
-              where: ``,
-              type: `비어있음`,
+              summary: `“공공부문 직무형 정규직제 도입”`,
+              description: `공공부문부터 비정규직 남용을 억제하고, 저임금을 해소하기 위해 직무형 정규직 일자리를 만들고 사회복지고용공단을 설립해 이들을 관리하겠다. 안전, 복지, 고용 분야 등에서 공공부문 비정규직의 정규직화 및 추가 채용이 필요하며, 국민의 추가 부담은 최대한으로 줄이고 근로자들의 고용은 안정시키면서 공공서비스의 질을 높이겠다.`,
+              where: `국민의당 주최 일자리 토론회 中 (2017.02)`,
+              type: `공약`,
               links: {
-                kbs: `http://news.kbs.co.kr/news/view.do?ncd=3426611&ref=A`
+                kbs: `http://news.kbs.co.kr/news/view.do?ncd=3432703&ref=A`
+              }
+            }, {
+              summary: `“교육혁명, 산업구조 개혁으로 민간 일자리 창출”`,
+              description: `4차 산업혁명 시대에는 인공지능, 로봇의 발전과 함께 지식정보산업과 관련된 일자리들이 늘어날 것이다. 정부는 이 시대를 대비한 교육혁명을 이뤄내고, 인재 양성과 과학기술혁명을 통한 기반기술 확보, 공정한 경쟁이 가능한 산업구조 개혁 등을 통해 양질의 일자리들을 만들어질 수 있다. 기업과 민간이 만드는 일자리 중심에 정부는 사회적 약자를 위한 일자리를 만드는 작업을 병행해야 한다.`,
+              where: `국회 교섭단체 대표연설 中 (2017.02)`,
+              type: `발언`,
+              links: {
+                mt: `http://the300.mt.co.kr/newsView.html?no=2017020609487683763`
               }
             }, {
               summary: `“혁신도시 공공기관 지역인재 채용 30% 법제화”`,
@@ -513,16 +591,15 @@
                 domin: `http://www.domin.co.kr/news/articleView.html?idxno=1141116`
               }
             }, {
-              summary: `“중소기업 임금이 대기업의 80%수준 되도록 정부 한시적 지원”`,
-              description: `중장기적으로는 산업구조를 바꿔야 하지만, 청년실업 문제가 가장 심각해질 것인 향후 3년 정도 동안은 중소기업의 임금 수준이 대기업의 75~80%가 되도록 정부가 한시적으로 지원해야 한다고 주장했다.`,
-              where: `동아일보와의 인터뷰(2017.02)`,
-              type: `발언`,
-
+              summary: `“중소기업 임금이 대기업의 80%수준 되도록 정부 지원”`,
+              description: `중장기적으로는 산업구조를 바꿔야 하지만, 청년실업 문제가 가장 심각해질 것인 향후 3년 정도 동안은 중소기업의 임금 수준이 대기업의 75~80%가 되도록 정부가 한시적으로 지원해야 한다. 중소기업 초임이 대기업 초임의 60%에 불과해 청년들이 취업을 꺼리고 있기에, 앞으로 5년 동안 중소기업에 취업하는 청년들에게 매달 50만 원씩 지원하겠다`,
+              where: `국민의당 주최 일자리 토론회 中 (2017.02)`,
+              type: `공약`,
               links: {
-                donga: `http://news.donga.com/Main/3/all/20170213/82834198/1`
+                kbs: `http://news.kbs.co.kr/news/view.do?ncd=3244348&ref=A`
               }
             }, {
-              summary: `“엔젤 투자자와 벤처캐피털 활성화, 대표이사 연대보증 폐지 등을 추진하겠다”`,
+              summary: `“엔젤 투자자/벤처캐피털 활성화, 대표이사 연대보증 폐지”`,
               description: `실패해도 다시 도전하는 기업가는 결국 성공해, 처음에 한 실패보다 몇 배 더 큰 부가가치를 창출한다며 창업실패에 대한 부담을 덜어주는 대표이사연대보증 폐지 추진을 약속했다. 또한 엔젤 투자자와 벤처 캐피털 활성화 등과 같은 창업 장려 공약을 밝혔다.`,
               where: `국회교섭단체대표연설 中 (2017.02)`,
               type: `발언`,
@@ -532,7 +609,7 @@
               }
             }],
             university: [{
-              summary: `“5-2-2 학제 개편→대학 전 진로탐색 2년”`,
+              summary: `“5-2-2 학제 개편 통해 대학 전 진로탐색 시간 2년 마련”`,
               description: `현행 ‘6년(초등학교)-3년(중학교)-3년(고등학교)’ 학제를 ‘5년(초등학교)-5년(중ㆍ고등 학교)-2년(진로탐색 또는 직업학교)’으로 개편한다. 개편된 학제에서는 중고등학교를 졸업한 이후 대학에 가려는 학생은 진로탐색 학교에 진학하고 직업학교에 진학한 학생은 일찌감치 직업훈련을 받고 직장에 다닌다. 보통교육과 대학교육을 분리해 창의교육을 가능하게 하고 사교육도 줄이겠다는 목적을 담고 있다.`,
               where: `국회 교섭단체대표 연설 中 (2017.02)`,
               type: `공약`,
@@ -552,8 +629,8 @@
             }, {
               summary: `“전국 모든 대학에서 반값 등록금을 실현”`,
               description: `http://news.kbs.co.kr/news/view.do?ncd=3352330`,
-              where: `교육 공약 (2012)`,
-              type: `18대 대선 공약`,
+              where: `18대 대선 교육 공약 (2012)`,
+              type: `공약`,
 
               links: {
                 kbs: `http://news.kbs.co.kr/news/view.do?ncd=2561028`
@@ -564,7 +641,7 @@
               description: `국민의당 창당 1호 법안으로, 청년 세대의 주거문제를 지원하기 위해 국민연금을 재원으로 청년희망임대주택을 조성하는 내용을 담고 있다. 입주 자격은
     만 35세 이하 청년과 신혼부부이며, 임대 조건은 정부 정책금리를 초과할 수 없도록 했다.`,
               where: `공공주택 특별법 (2016.02)`,
-              type: `법안발의`,
+              type: `법안`,
 
               links: {
                 kbs: `http://news.kbs.co.kr/news/view.do?ncd=3230514&ref=A`
@@ -573,8 +650,8 @@
               summary: `“공공임대주택은 연 12만 호 공급한다”`,
               description: `2012년 18대 대선 후보 공약으로 공공임대주택을 2018년까지 연간 12만 호를 공급, 공공임대주택 거주
     가구 비율을 10%로 높인다는 내용을 담고 있다. 이를 위해 정부가 조성하는 공공택지에는 가능한 한 분양 전환되지 않는 공공임대주택과 토지 임대부 주택을 위주로 건설키로 했다.`,
-              where: `주거안정대책 (2012)`,
-              type: `18대 대선 공약`,
+              where: `18대 대선 주택 공약 (2012)`,
+              type: `공약`,
 
               links: {}
             }, ],
@@ -582,17 +659,17 @@
               summary: `“군 복무 단축으로 국방력 유지 어려워”`,
               description: `“인구의 변화추세(저출산), 세계적인
     무기 발전상황, 여러 국제정세 등을 종합적으로 고려해 중장기적으로 군 병력에 대한 계획을 세워야 한다. 일부 대선주자들이 내세운 군복무기간 단축과 모병제 공약은 표를 의식한 포퓰리즘에 지나지 않는다.”`,
-              where: `용산의 합동참모본부를 방문 中 (2017.01)`,
+              where: `용산의 합동참모본부 방문 中 (2017.01)`,
               type: `발언`,
 
               links: {
                 kbs: `http://news.kbs.co.kr/news/view.do?ncd=3417959&ref=A`
               }
             }, {
-              summary: `“한미동맹 굳건히…자강안보(自强安保)”`,
+              summary: `“한미동맹 굳건히…자강안보(自强安保) 확립해야”`,
               description: `“굳건한 한미동맹을 근간으로 우리 스스로 지킬 수 있도록 국방력을 강화해야 한다. 미래지향적이고 호혜적으로 한미동맹을 발전시키고 더욱더 국방력을
     강화하는 데 많은 관심과 투자가 필요하며, 이를 '자강안보'라고 부르겠다"`,
-              where: `용산의 합동참모본부를 방문 中 (2017.01)`,
+              where: `용산의 합동참모본부 방문 中 (2017.01)`,
               type: `발언`,
 
               links: {
@@ -621,7 +698,7 @@
                 khan: `http://news.khan.co.kr/kh_news/khan_art_view.html?artid=201702122244005&code=940100#csidx40dcfeb2549af13a4aa84c9a4d58a10`
               }
             }, {
-              summary: `“돌봄할당제: 육아휴직 초기 3개월의 소득대체율을 100%로”`,
+              summary: `“돌봄할당제: 육아휴직 초기 3개월의 소득대체율 100%”`,
               description: `돌봄할당제는 육아휴직 초기 3개월의 소득대체율을 100%로 올리는 방안으로, 현재 ‘아빠의
     달’은 두 번째 배우자가 육아휴직을 사용할 경우 첫 3개월간 소득의 100%(150만 원 한도)를 제공하고 있다. 이 제도는 어머니의 육아휴직을 전제로 한 제도로 성평등한 부모 돌봄 참여를 막기에 초기 육아 3개월
     소득대체율을 높여야 한다고 밝혔다. 한편 육아휴직 기간 확대에는 부정적이다. 대신 육아휴직 급여의 소득대체율을 60%(200만 원 상한)로 올리고, 공보육 강화를 제안했다.`,
@@ -752,7 +829,7 @@
               description: `민간 기업 근로자들의 육아휴직을 공공부문 근로자들처럼 최장 3년 보장하며, 사용 횟수도 최대 3회까지 나눠 자유롭게 사용할 수 있도록 하는 내용을 담았다.`,
               where: `육아휴직 3년 법 (남녀
     고용 평등과 일·가정 양립 지원법) (2017.01)`,
-              type: `법안 발의`,
+              type: `법안`,
 
               links: {
                 kbs: `http://news.kbs.co.kr/news/view.do?ncd=3422490&ref=A`
@@ -763,7 +840,7 @@
     수당 급여율도 60%로 상향 조정했다. 다만 기업에서 육아휴직을 쓰지 못하게 할 경우의 처벌 조항은 현실과 괴리가 커진다는 이유로 포함하지 않았다.`,
               where: `육아휴직 3년 법 (남녀 고용
     평등과 일·가정 양립 지원법) (2017.01)`,
-              type: `법안 발의`,
+              type: `법안`,
 
               links: {
                 kbs: `http://news.kbs.co.kr/news/view.do?ncd=3410994&ref=A`
@@ -774,7 +851,7 @@
               description: `'만 8세 또는 초등학교 2학년 이하'의 자녀로만 한정됐던 기존 육아휴직제 적용 대상을 '만 18세 또는 고등학교 3학년 이하'로 넓혔다. 육아휴직을
     3차례까지 나눠 쓸 수 있기 때문에, 자녀의 성장 단계에 맞춰 탄력적으로 휴직을 사용할 수 있다.`,
               where: `육아휴직 3년 법 (남녀 고용 평등과 일·가정 양립 지원법) (2017.01)`,
-              type: `법안 발의`,
+              type: `법안`,
 
               links: {
                 kbs: `http://news.kbs.co.kr/news/view.do?ncd=3410994&ref=A`
@@ -787,7 +864,6 @@
               description: `“정부가 휴대전화 앱과 같은 일자리 플랫폼을 만들고 기업과 국민이 들어와 일할 수 있도록 하는 체제를 만들겠다. 일자리 플랫폼은 중소기업이나 개인이 만들 수 없기 때문에 정부가 전국에 깔아야 하며, 이것이 정부와 민간이 협업하는 공유형 시장경제체제이다.”`,
               where: `홍대 앞거리 ‘토크 버스킹’ 中 (2017.02)`,
               type: `발언`,
-
               links: {
                 ytn: `http://www.ytn.co.kr/_ln/0101_201702190010074717`
               },
@@ -812,8 +888,8 @@
             }, {
               summary: `“주 40시간, 연장 포함 주 52시간 노동 확립하겠다”`,
               description: `노동 시간을 주 40시간, 연장노동 포함 주 52시간 제도를 확립하겠다고 밝혔다. 야근 단축으로 추가 고용을 해야 하는 경우 국가가 ‘고용보조금’을 지급해 야근 단축을 유도할 것이며, 공공과 민간기업에서 주 1회 실시하는 ‘야근 없는 날’을 주 2~3회로 확산시킬 필요가 있다고 밝혔다.`,
-              where: ``,
-              type: `비어있음`,
+              where: `대통령선거 노동 단축 공약 中 (2017.01)`,
+              type: `공약`,
 
               links: {
                 hani: `http://www.hani.co.kr/arti/politics/assembly/781286.html#csidxd73ea1607ad86598897c16d14ad05d3`
@@ -825,7 +901,8 @@
               type: `경기도 정책`,
 
               links: {
-                kbs: `http://news.kbs.co.kr/news/view.do?ncd=3305912&ref=A`
+                kbs: `http://news.kbs.co.kr/news/view.do?ncd=3305912&ref=A`,
+                kbs2: `http://news.kbs.co.kr/news/view.do?ncd=3396595&ref=A`
               },
             }, {
               summary: `“일정 비율 이상 청년 미취업자 고용해야”`,
@@ -941,24 +1018,24 @@
             women: [{
               summary: `"국공립 어린이집 수준의 보육서비스 제공 "`,
               description: `'따복(따뜻하고 복된) 어린이집'으로 이름 붙여진 경기도형 공보육 어린이집은 경기도 가족여성연구원이 기존 민간어린이집을 임차해 국공립 어린이집 수준의 보육서비스를 제공한다. 정원수에 따라 운영비와 차액 보육료를 경기도가 지원해 학부모가 부담하는 보육료가 국공립 어린이집과 비슷하다.`,
-              where: `경기도형 공보육 어린이집 (2016.12)`,
-              type: `경기도 정책`,
+              where: `경기도 정책: 경기도형 공보육 어린이집 (2016.12)`,
+              type: `정책`,
               links: {
                 kbs: `http://news.kbs.co.kr/news/view.do?ncd=3389511&ref=A`
               },
             }, {
               summary: `"공동직장 어린이집 확대"`,
               description: `산업단지나 중소기업 밀집 지역은 여성인력의 비중이 높아 보육수요는 많지만 직장어린이집이 부족한 보육 사각지대다. 이에 경기도는 중소기업 밀집 지역에서 공동직장 어린이집을 설치하여 경기도형 공보육을 운영 시스템으로 지원한다. [경기도형 공보육 시스템이란?] 국공립 어린이집에 준하는 보육서비스와 저렴한 보육료를 지원하는 어린이집 운영 체계로 ▲회계에 대한 상시 모니터링으로 회계 관리의 투명성 확보 ▲지속적인 서비스 질 관리가 가능한 상시 관리체계 구축 ▲시간 연장 보육 등 수요자 중심의 맞춤 보육 체계 구축 등이 주요 내용이다.`,
-              where: `중소기업 밀집 지역 공동 직장어린이집 확대 (2016.07)`,
-              type: `경기도 정책`,
+              where: `경기도 정책: 중소기업 밀집 지역 공동 직장어린이집 확대 (2016.07)`,
+              type: `정책`,
               links: {
                 kbs: `http://news.kbs.co.kr/news/view.do?ncd=3305890&ref=A`
               },
             }, {
               summary: `"보육교사 처우개선비 月 3만 원 지급"`,
               description: `6·4 지방선거 당시 "보육은 국가책임이므로 보육교사도 교육공무원에 준하는 대우를 해야 한다"며 내년(2013년)부터 월 10만 원씩 지급하고 재정여건에 따라 50만 원까지 늘리겠다고 약속한 바 있으며, 실제로 2014년에 보육교사 처우개선비 인상금액을 3만 원으로 제정했다.`,
-              where: `경기도지사 교육공약 이행 내용 中 (2014.11)`,
-              type: `경기도 정책`,
+              where: `정책: 경기도지사 교육공약 이행 내용 中 (2014.11)`,
+              type: `정책`,
               links: {
                 joongboo: `http://www.joongboo.com/news/articleView.html?idxno=954109`
               },
@@ -979,7 +1056,8 @@
               where: `KBS 특별 대담 프로그램 ‘대선주자에게 듣는다’ 中 (2017.02)`,
               type: ``,
               links: {
-                kbs: `http://news.kbs.co.kr/news/view.do?ncd=3422761&ref=A`
+                kbs: `http://news.kbs.co.kr/news/view.do?ncd=3422761&ref=A`,
+                kbs2: `http://news.kbs.co.kr/news/view.do?ncd=3422793&ref=A`
               }
             }, {
               summary: `“최저임금은 인상, 최고 임금은 제한”`,
@@ -1003,7 +1081,7 @@
               summary: `“반값등록금 1인 시위”`,
               description: `한국대학생연합(한대련) 등이 조건 없는 '반값 등록금' 실현을 촉구하는 대규모 집회를 열었고, 진보 정치인들은 반값 등록금을 위한 진보의 합창'이란 팻말을 들고 1인 시위에 참여했다. 참여한 심상정 후보는 "대학생 스스로 힘을 모아가고 있는 상황에서 정치권도 지지한다는 것을 보여주기 위해 1인 시위에 참여하게 됐다"고 소감을 밝혔다.`,
               where: `‘반값 등록금을 위한 진보의 합창’ 1인 시위 (2011.06)`,
-              type: `없음`,
+              type: `행동`,
               links: {
                 mt: `http://www.mt.co.kr/view/mtview.php?type=1&no=2011061014382582519&outlink=1`
               }
@@ -1045,7 +1123,7 @@
               summary: `“인권이 보장되는 병영생활”`,
               description: `모든 군인은 다른 군인의 자유와 권리를 존중하고 기본적 인권을 보장하는 병영생활을 조성하도록 적극적으로 노력한다는 내용을 담은 법안을 발의했다.`,
               where: `군인권기본법안(2014)`,
-              type: `법안 발의`,
+              type: `법안`,
               links: {
                 minsim: `http://www.minsim.or.kr/?p=2041`
               }
@@ -1061,7 +1139,7 @@
             }, {
               summary: `“부모의 유연근무를 확대하겠다”`,
               description: `'육아기 근로 단축 제도'를 육아휴직 기간을 포함해 최대 3년까지 분할 이용할 수 있도록 하고, 아이의 등, 하교 시간을 맞출 수 있도록 '유연근무제'도 확대할 계획이다.`,
-              where: ``,
+              where: `‘생애 단계별 육아정책 패키지'中 (2017.01)`,
               type: `공약`,
               links: {
                 kbs: `http://news.kbs.co.kr/news/view.do?ncd=3416357&ref=A`
@@ -1069,7 +1147,7 @@
             }, {
               summary: `“부부 출산 휴가 1개월 의무, 육아휴직 아빠 3개월 할당”`,
               description: `배우자 출산휴가를 현행 3일에서 30일로 확대해 부부 출산휴가 1개월 의무제를 도입하며, 3개월씩 부부가 반드시 육아휴직을 사용해야 하는 ‘아빠·엄마 유아휴직 의무 할당제’를 도입하겠다”`,
-              where: ``,
+              where: `‘생애 단계별 육아정책 패키지'中 (2017.01)`,
               type: `공약`,
               links: {
                 kbs: `http://news.kbs.co.kr/news/view.do?ncd=3416357&ref=A`,
@@ -1078,7 +1156,7 @@
             }, {
               summary: `“보육 119와 보육 전담 공무원을 신설하겠다”`,
               description: `보육 시설 내에서 아동학대가 발생하면 보육교사 등이 익명으로 고발할 수 있는 채널인 ‘보육 119’와 부모에게 맞춤형 보육서비스를 제공하고, 보육 시설을 일상적으로 지도 및 관리‧감독하는 업무를 담당하는 ‘보육 전담 공무원’을 신설하겠다.`,
-              where: ``,
+              where: `정의당 20대 총선 보육·교육공약 中 (2016.04)`,
               type: `공약`,
               links: {
                 ibabynews: `http://www.ibabynews.com/news/newsview.aspx?newscode=201604011749131686669757&categorycode=0011#z`,

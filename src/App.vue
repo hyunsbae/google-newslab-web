@@ -1,11 +1,11 @@
 <template>
-  <div id="background" style="text-align: center" @touchend.prevent="moveToCandidatePage">
+  <div id="background" style="text-align: center"@touchend.prevent="moveToCandidatePage" >
     <transition name="loading">
       <div v-show="go" id="water"></div>
     </transition>
     <div v-if="go" :class="{loading: true, 'yellow': colorChanged}">로딩중..</div>
     <div class="logo"></div>
-    <div class="images" @touchend.prevent="moveToCandidatePage">
+    <div class="images">
       <div class="pool">
       </div>
     </div>
@@ -286,12 +286,6 @@
       background-image: url("/src/assets/img/you-l.png");
       width: 112px;
       height: 112px;
-    }
-    #all {
-      display: inline-block;
-      position: absolute;
-      right: 10%;
-      top: 35%;
     }
     .pool {
       background-image: url('/src/assets/img/pool-l.png');
