@@ -2,6 +2,7 @@
   <div class="background">
     <a class="logo" href="/"></a>
     <div v-for="key in keys" v-if="$route.params.name === key" :id="'back' + key" class="top">
+      <div class="top-image"></div>
       <div class="top-text ">{{ messages[$route.params.name].up }}</div>
       <div class="bottom-text ">{{ messages[$route.params.name].down }}</div>
     </div>
@@ -15,7 +16,7 @@
       <template v-for="(value, key) in candidates[$route.params.name]">
         <transition-group name="custom" enter-active-class="animated fadeInLeft" tag="Card">
           <Card v-for="content in value" key="key" v-if="selected==='all' || selected===key" :summary="content.summary" :description="content.description"
-            :where="content.where" :type="content.type" :links="content.links"/>
+            :where="content.where" :type="content.type" :links="content.links" />
         </transition-group>
       </template>
     </div>
@@ -1042,7 +1043,7 @@
               summary: `“국민 월급 300만 원 시대 열겠다”`,
               description: `최저임금 인상을 통해 '국민 월급 300만 원 시대'를 열 것이며, 정규직과 비정규직의 격차 해소를 위해 동일노동-동일 임금 원칙을 강력하게 추진하겠다. 임금차별 수단으로 악용되는 포괄임금제를 폐기하고, 하청 노동자 임금을 원청 정규직의 80% 수준까지 올리며, ‘사업장 내 근로자 임금차별 해소를 위한 특별법'을 제정하겠다.`,
               where: `KBS 특별 대담 프로그램 ‘대선주자에게 듣는다’ 中 (2017.02)`,
-              type: ``,
+              type: `발언`,
               links: {
                 kbs: `http://news.kbs.co.kr/news/view.do?ncd=3422761&ref=A`,
               }
@@ -1228,6 +1229,15 @@
     position: relative;
     width: 100vw;
     height: 464px;
+  }
+
+  .top-image {
+    width: 46px;
+    height: 69px;
+    position: absolute;
+    background-image: url('/src/assets/img/tubejung-s.png');
+    bottom: 9em;
+    left: 0.8em;
   }
 
   .top-text {

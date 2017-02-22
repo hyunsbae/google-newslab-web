@@ -1,5 +1,5 @@
 <template>
-  <div id="background" style="text-align: center" @mouseup.prevent="moveToCandidatePage" @touchend.prevent="moveToCandidatePage" >
+  <div id="background" style="text-align: center">
     <transition name="loading">
       <div v-if="go" id="water"></div>
     </transition>
@@ -11,33 +11,33 @@
     </div>
     <div id="all">
       <div class="images">
-        <div class="container" @mousedown="selected = 'ahn'" @touchstart="selected = 'ahn'">
+        <div class="container" @mousedown="selected = 'ahn'; moveToCandidatePage();">
           <div id="ahn"></div>
           <div class="name">안철수</div>
         </div>
-        <div class="container" @mousedown="selected = 'sim'" @touchstart="selected = 'sim';">
+        <div class="container" @mousedown="selected = 'sim'; moveToCandidatePage();">
           <div id="sim"></div>
           <div class="name">심상정</div>
         </div>
-        <div class="container" @mousedown="selected = 'moon'" @touchstart="selected = 'moon'">
+        <div class="container" @mousedown="selected = 'moon'; moveToCandidatePage();">
           <div id="moon" src="/src/assets/img/moon-s.png"></div>
           <div class="name">문재인</div>
         </div>
-        <div class="container" @mousedown="selected = 'jung'" @touchstart="selected = 'jung'">
+        <div class="container" @mousedown="selected = 'jung'; moveToCandidatePage();">
           <div id="jung" src="/src/assets/img/jung-s.png"></div>
           <div class="name">안희정</div>
         </div>
       </div>
       <div class="images">
-        <div class="container" @mousedown="selected = 'lee'" @touchstart="selected = 'lee'">
+        <div class="container" @mousedown="selected = 'lee'; moveToCandidatePage();">
           <div id="lee" src="/src/assets/img/lee-s.png"></div>
           <div class="name">이재명</div>
         </div>
-        <div class="container" @mousedown="selected = 'nam'" @touchstart="selected = 'nam'">
+        <div class="container" @mousedown="selected = 'nam'; moveToCandidatePage();">
           <div id="nam" src="/src/assets/img/nam-s.png"></div>
           <div class="name">남경필</div>
         </div>
-        <div class="container" @mousedown="selected = 'you'" @touchstart="selected = 'you'">
+        <div class="container" @mousedown="selected = 'you'; moveToCandidatePage();">
           <div id="you" src="/src/assets/img/you-s.png"></div>
           <div class="name">유승민</div>
         </div>
@@ -117,7 +117,7 @@
     height: 228px;
     text-align: center;
     margin-top: 30%;
-    margin-bottom: 2em;
+    margin-bottom: .5em;
   }
 
   .logo {
@@ -146,7 +146,7 @@
     background-image: url('/src/assets/img/wave.png');
     position: absolute;
     width: 100vw;
-    height: 120vh;
+    height: 130vh;
     background-position: top left;
     bottom: -100px;
   }
@@ -158,7 +158,7 @@
     }
     #water {
       width: 375px;
-      height: 800px;
+      height: 900px;
     }
   }
 
@@ -168,7 +168,7 @@
     }
     #water {
       width: 375px;
-      height: 800px;
+      height: 900px;
     }
   }
 
