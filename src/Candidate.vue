@@ -5,11 +5,11 @@
       <div class="top-text ">{{ messages[$route.params.name].up }}</div>
       <div class="bottom-text ">{{ messages[$route.params.name].down }}</div>
     </div>
-    <div class="buttons" style="padding-left: 1em; padding-top: 1em; ">
+    <div style="padding-left: 1em; padding-top: .8em; margin-bottom: 1em">
       <a :class="{ 'active-button': selected===key, button: true} " v-for="(buttonText, key) in buttonTexts " @click="selected=key ">
         {{ buttonText }}
       </a>
-      <a class="button" href="http://stagekk.org/game ">{{names[$route.params.name]}}</a>
+      <a class="gamebutton" href="http://stagekk.org/game ">{{names[$route.params.name]}}</a>
     </div>
     <div class="policys">
       <template v-for="(value, key) in candidates[$route.params.name]">
@@ -1266,6 +1266,22 @@
     line-height: 20px;
   }
 
+  .gamebutton {
+    text-decoration: none;
+    font-size: 17px;
+    padding-right: 1.5em;
+    padding-left: 1.5em;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    margin: 0.2em;
+    display: inline-block;
+    color: white;
+    border-radius: 20px;
+    letter-spacing: -0.02em;
+    line-height: 20px;
+    background-color: #72c2d7
+  }
+
   .button:hover {
     cursor: pointer;
     background-color: #FFC03B;
@@ -1278,8 +1294,8 @@
 
   .background {
     background-color: white;
-    background-image: linear-gradient(#269 1px, transparent 1px), linear-gradient(90deg, #269 1px, transparent 1px);
-    background-size: 25px 25px, 25px 25px;
+    background-image: linear-gradient(#0081C2 1px, transparent 1px), linear-gradient(90deg, #269 1px, transparent 1px);
+    background-size: 30px 30px, 30px 30px;
     min-height: 100vh;
   }
 </style>

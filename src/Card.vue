@@ -50,9 +50,10 @@
     padding: 20px;
     cursor: pointer;
     vertical-align: middle;
-    margin-top: 10px;
+    margin-bottom: 1.5em;
     background-color: #EDEDED;
     font-family: 'Noto Sans KR';
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.17);
   }
 
   .summary {
@@ -60,7 +61,7 @@
     font-size: 19px;
     line-height: 23px;
     letter-spacing: -0.02em;
-    font-weight: 300;
+    font-weight: 400;
   }
 
   .description {
@@ -68,17 +69,16 @@
     font-size: 17.5px;
     line-height: 26px;
     letter-spacing: -0.03em;
-    font-weight: 200;
+    font-weight: 300;
     margin-top: 1em;
   }
 
   .where {
     display: block;
     font-size: 17.5px;
-    font-weight: 200;
+    font-weight: 300;
     letter-spacing: -0.03em;
     line-height: 26px;
     margin-top: 1em;
   }
-
 </style>

@@ -1,43 +1,43 @@
 <template>
-  <div id="background" style="text-align: center">
+  <div id="background" style="text-align: center" @touchend.prevent="moveToCandidatePage">
     <transition name="loading">
       <div v-show="go" id="water"></div>
     </transition>
     <div v-if="go" :class="{loading: true, 'yellow': colorChanged}">로딩중..</div>
     <div class="logo"></div>
-    <div class="images">
-      <div class="pool" @click.prevent="moveToCandidatePage">
+    <div class="images" @touchend.prevent="moveToCandidatePage">
+      <div class="pool">
       </div>
     </div>
     <div id="all">
       <div class="images">
-        <div class="container" @mousedown="selected = 'ahn'">
+        <div class="container" @mousedown="selected = 'ahn'" @touchstart="selected = 'ahn'">
           <div id="ahn"></div>
           <div class="name">안철수</div>
         </div>
-        <div class="container" @mousedown="selected = 'sim'">
+        <div class="container" draggable="true" @mousedown="selected = 'moon'; moveToCandidatePage()">
           <div id="sim"></div>
           <div class="name">심상정</div>
         </div>
-        <div class="container" @mousedown="selected = 'moon'">
+        <div class="container" @mousedown="selected = 'moon'; moveToCandidatePage()">
           <div id="moon" src="/src/assets/img/moon-s.png"></div>
           <div class="name">문재인</div>
         </div>
-        <div class="container" @mousedown="selected = 'jung'">
+        <div class="container" @mousedown="selected = 'jung'; moveToCandidatePage()">
           <div id="jung" src="/src/assets/img/jung-s.png"></div>
           <div class="name">안희정</div>
         </div>
       </div>
       <div class="images">
-        <div class="container" @mousedown="selected = 'lee'">
+        <div class="container" @mousedown="selected = 'lee'; moveToCandidatePage()">
           <div id="lee" src="/src/assets/img/lee-s.png"></div>
           <div class="name">이재명</div>
         </div>
-        <div class="container" @mousedown="selected = 'nam'">
+        <div class="container" @mousedown="selected = 'nam'; moveToCandidatePage()">
           <div id="nam" src="/src/assets/img/nam-s.png"></div>
           <div class="name">남경필</div>
         </div>
-        <div class="container" @mousedown="selected = 'you'">
+        <div class="container" @mousedown="selected = 'you'; moveToCandidatePage()">
           <div id="you" src="/src/assets/img/you-s.png"></div>
           <div class="name">유승민</div>
         </div>
@@ -60,6 +60,7 @@
     methods: {
 
       moveToCandidatePage(event) {
+        console.log('hi');
         if (this.selected !== 'none') {
           this.go = true;
           setTimeout(function (target) {
@@ -107,8 +108,6 @@
 
   .container {
     display: inline-block;
-    padding: 0;
-    margin: 0;
   }
 
   .pool {
@@ -136,8 +135,8 @@
 
   #background {
     background-color: white;
-    background-image: linear-gradient(#269 1px, transparent 1px), linear-gradient(90deg, #269 1px, transparent 1px);
-    background-size: 25px 25px, 25px 25px;
+    background-image: linear-gradient(#0081C2 1px, transparent 1px), linear-gradient(90deg, #0081C2 1px, transparent 1px);
+    background-size: 30px 30px, 30px 30px;
     min-width: 320px;
     height: 100vh;
     font-family: 'Noto Sans KR';
@@ -151,8 +150,8 @@
     background-position: top left;
     bottom: 0;
   }
-
   /* iphone7 */
+
   @media all and (device-width: 375px) and (device-height: 667px) and (orientation:portrait) {
     #background {
       height: 667px;
