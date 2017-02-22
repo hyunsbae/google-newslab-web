@@ -83,7 +83,6 @@
               where: `대학생·청년 지지모임 '허니 MOON' 출범식 中 (2017.2)`,
               type: `발언`,
               links: {
-                kbs: `http://news.kbs.co.kr/news/view.do?ncd=3422959&ref=A`,
                 kbs2: `http://news.kbs.co.kr/news/view.do?ncd=3413628&ref=A`
               },
             }, {
@@ -92,8 +91,7 @@
               where: `정책공간 국민성장 주최 일자리 정책포럼 (2017.1)`,
               type: `발언`,
               links: {
-                kbs: `http://news.kbs.co.kr/news/view.do?ncd=3414414&ref=A`,
-                kbs2: `http://news.kbs.co.kr/news/view.do?ncd=3413956&ref=A`
+                kbs: `http://news.kbs.co.kr/news/view.do?ncd=3413690&ref=A`,
               },
             }, {
               summary: `“공정임금제 실시할 것”`,
@@ -436,7 +434,6 @@
 
               links: {
                 kbs: `http://news.kbs.co.kr/news/view.do?ncd=3416460&ref=A`,
-                blog: `http://blog.naver.com/jaemyunglee/220922551567`
               },
             }, {
               summary: `“공영형 사립대학 체제 구축해야”`,
@@ -445,8 +442,6 @@
               type: `발언`,
 
               links: {
-                kyosu: `http://www.kyosu.net/news/articleView.html?idxno=28886`,
-                kbs: `http://news.kbs.co.kr/news/view.do?ncd=3416460&ref=A`,
                 blog: `http://blog.naver.com/jaemyunglee/220922551567`
               },
             }, {
@@ -456,7 +451,6 @@
               type: `발언`,
 
               links: {
-                kbs: `http://news.kbs.co.kr/news/view.do?ncd=3416460&ref=A`,
                 blog: `http://blog.naver.com/jaemyunglee/220922551567`
               },
             }, {
@@ -477,7 +471,6 @@
 
               links: {
                 kbs: `http://news.kbs.co.kr/news/view.do?ncd=3413739&ref=A`,
-                factoll: `http://factoll.com/page/news_view.php?Num=3912`
               },
             }, {
               summary: `“’내 집 마련의 꿈’지원하는 주택 통장”`,
@@ -628,7 +621,7 @@
               }
             }, {
               summary: `“전국 모든 대학에서 반값 등록금을 실현”`,
-              description: `http://news.kbs.co.kr/news/view.do?ncd=3352330`,
+              description: `2012년 18대 대선 후보 공약으로 2014년부터 일부 전문대에서 반값 등록금을 실시하고, 오는 2016년엔 전체 지방대로, 2017년까지는 전체 수도권 대학으로 확대한다는 계획 등을 내놓았다.`,
               where: `18대 대선 교육 공약 (2012)`,
               type: `공약`,
 
@@ -695,7 +688,6 @@
 
               links: {
                 kbs: `http://news.kbs.co.kr/news/view.do?ncd=3425865&ref=A`,
-                khan: `http://news.khan.co.kr/kh_news/khan_art_view.html?artid=201702122244005&code=940100#csidx40dcfeb2549af13a4aa84c9a4d58a10`
               }
             }, {
               summary: `“돌봄할당제: 육아휴직 초기 3개월의 소득대체율 100%”`,
@@ -708,7 +700,6 @@
 
               links: {
                 kbs: `http://news.kbs.co.kr/news/view.do?ncd=3425865&ref=A`,
-                khan: `http://news.khan.co.kr/kh_news/khan_art_view.html?artid=201702122244005&code=940100#csidx6f18c3934685938bf86afb1fd1d8714`
               }
             }, ],
           },
@@ -786,7 +777,6 @@
               type: `발언`,
 
               links: {
-                kbs: `http://news.kbs.co.kr/news/view.do?ncd=3418620&ref=A`,
                 khan: `http://news.khan.co.kr/kh_news/khan_art_view.html?artid=201701261000001`,
               }
             }, ],
@@ -901,7 +891,6 @@
               type: `경기도 정책`,
 
               links: {
-                kbs: `http://news.kbs.co.kr/news/view.do?ncd=3305912&ref=A`,
                 kbs2: `http://news.kbs.co.kr/news/view.do?ncd=3396595&ref=A`
               },
             }, {
@@ -976,7 +965,6 @@
               type: `경기도 정책`,
 
               links: {
-                asiae: `http://view.asiae.co.kr/news/view.htm?idxno=2016051611144982642`,
                 kbs: `http://news.kbs.co.kr/news/view.do?ncd=3280684&ref=A`
               },
             }, ],
@@ -1057,7 +1045,6 @@
               type: ``,
               links: {
                 kbs: `http://news.kbs.co.kr/news/view.do?ncd=3422761&ref=A`,
-                kbs2: `http://news.kbs.co.kr/news/view.do?ncd=3422793&ref=A`
               }
             }, {
               summary: `“최저임금은 인상, 최고 임금은 제한”`,
@@ -1074,7 +1061,6 @@
               type: `공약`,
               links: {
                 hani: `http://www.hani.co.kr/arti/society/labor/783377.html#csidx0a8aae49c2e6e08af38457878983e25`,
-                kbs: `http://news.kbs.co.kr/news/view.do?ncd=3414331&ref=A`
               }
             }, ],
             university: [{
@@ -1151,7 +1137,6 @@
               type: `공약`,
               links: {
                 kbs: `http://news.kbs.co.kr/news/view.do?ncd=3416357&ref=A`,
-                etoday: `http://www.etoday.co.kr/news/section/newsview.php?idxno=1445662#csidx723e428f239f86c8e4f40bf3dc2a3c7 `
               }
             }, {
               summary: `“보육 119와 보육 전담 공무원을 신설하겠다”`,
@@ -1160,7 +1145,6 @@
               type: `공약`,
               links: {
                 ibabynews: `http://www.ibabynews.com/news/newsview.aspx?newscode=201604011749131686669757&categorycode=0011#z`,
-                focus: `http://www.focus.kr/view.php?key=2016030900164902519`
               }
             }, ],
           }

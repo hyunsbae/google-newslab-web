@@ -1,9 +1,9 @@
 <template>
-  <div id="background" style="text-align: center"@touchend.prevent="moveToCandidatePage" >
+  <div id="background" style="text-align: center" @mouseup.prevent="moveToCandidatePage" @touchend.prevent="moveToCandidatePage" >
     <transition name="loading">
       <div v-show="go" id="water"></div>
     </transition>
-    <div v-if="go" :class="{loading: true, 'yellow': colorChanged}">로딩중..</div>
+    <div v-if="go" :class="{loading: true, 'yellow': colorChanged}"></div>
     <div class="logo"></div>
     <div class="images">
       <div class="pool">
@@ -15,29 +15,29 @@
           <div id="ahn"></div>
           <div class="name">안철수</div>
         </div>
-        <div class="container" draggable="true" @mousedown="selected = 'moon'; moveToCandidatePage()">
+        <div class="container" @mousedown="selected = 'sim'" @touchstart="selected = 'sim';">
           <div id="sim"></div>
           <div class="name">심상정</div>
         </div>
-        <div class="container" @mousedown="selected = 'moon'; moveToCandidatePage()">
+        <div class="container" @mousedown="selected = 'moon'" @touchstart="selected = 'moon'">
           <div id="moon" src="/src/assets/img/moon-s.png"></div>
           <div class="name">문재인</div>
         </div>
-        <div class="container" @mousedown="selected = 'jung'; moveToCandidatePage()">
+        <div class="container" @mousedown="selected = 'jung'" @touchstart="selected = 'jung'">
           <div id="jung" src="/src/assets/img/jung-s.png"></div>
           <div class="name">안희정</div>
         </div>
       </div>
       <div class="images">
-        <div class="container" @mousedown="selected = 'lee'; moveToCandidatePage()">
+        <div class="container" @mousedown="selected = 'lee'" @touchstart="selected = 'lee'">
           <div id="lee" src="/src/assets/img/lee-s.png"></div>
           <div class="name">이재명</div>
         </div>
-        <div class="container" @mousedown="selected = 'nam'; moveToCandidatePage()">
+        <div class="container" @mousedown="selected = 'nam'" @touchstart="selected = 'nam'">
           <div id="nam" src="/src/assets/img/nam-s.png"></div>
           <div class="name">남경필</div>
         </div>
-        <div class="container" @mousedown="selected = 'you'; moveToCandidatePage()">
+        <div class="container" @mousedown="selected = 'you'" @touchstart="selected = 'you'">
           <div id="you" src="/src/assets/img/you-s.png"></div>
           <div class="name">유승민</div>
         </div>
