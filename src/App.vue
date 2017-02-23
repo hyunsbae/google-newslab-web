@@ -100,7 +100,7 @@
     margin: 0 auto;
     right: 0;
     left: 0;
-    margin-top: 40px;
+    margin-top: 45px;
   }
 
   #swimmingjung {
@@ -347,39 +347,45 @@
       display: none;
     }
     #swimmingjung {
-      background-image: url('/src/assets/img/tubejung-m.png');
-      width: 89px;
-      height: 134px;
+      background-image: url('/src/assets/img/tubejung-l.png');
+      width: 130px;
+      height: 195px;
     }
     #swimminglee {
-      background-image: url('/src/assets/img/tubelee-m.png');
-      width: 102px;
-      height: 129px;
+      background-image: url('/src/assets/img/tubelee-l.png');
+      width: 149px;
+      height: 190px;
     }
     #swimmingsim {
-      background-image: url('/src/assets/img/tubesim-m.png');
-      width: 85px;
-      height: 132px;
+      background-image: url('/src/assets/img/tubesim-l.png');
+      width: 125px;
+      height: 193px;
     }
     #swimmingnam {
-      background-image: url('/src/assets/img/tubenam-m.png');
-      width: 89px;
-      height: 134px;
+      background-image: url('/src/assets/img/tubenam-l.png');
+      width: 131px;
+      height: 196px;
     }
     #swimmingmoon {
-      background-image: url('/src/assets/img/tubemoon-m.png');
-      width: 91px;
-      height: 130px;
+      background-image: url('/src/assets/img/tubemoon-l.png');
+      width: 133px;
+      height: 190px;
     }
     #swimmingyou {
-      background-image: url('/src/assets/img/tubeyou-m.png');
-      width: 94px;
-      height: 131px;
+      background-image: url('/src/assets/img/tubeyou-l.png');
+      width: 138px;
+      height: 193px;
     }
     #swimmingahn {
-      background-image: url('/src/assets/img/tubeahn-m.png');
-      width: 92px;
-      height: 127px;
+      background-image: url('/src/assets/img/tubeahn-l.png');
+      width: 134px;
+      height: 186px;
+    }
+    .swimming {
+      margin: 0 auto;
+      right: 0;
+      left: 0;
+      margin-top: 10em;
     }
   }
 
