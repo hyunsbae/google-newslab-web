@@ -34,7 +34,7 @@
           lee: '이재명으로 게임하기',
           ahn: '안철수로 게임하기',
           nam: '남경필로 게임하기',
-          you: '유승민으로 게임학기',
+          you: '유승민으로 게임하기',
           sim: '심상정으로 게임하기'
         },
         keys: [
@@ -241,7 +241,7 @@
           jung: {
             job: [{
               summary: `“노동시장 유연화 정책 찬성”`,
-              description: `비정규직과 파트타임 다양한 형태의 노동계약과 일자리를 늘리는 것은 현 산업구조에서 필연적이다. 문제는 비정규직이 값싼 노동력과 노동착취를 의미하는 단어가 되어 버린 현실에 있다. 노동계약 상태에 대한 정부의 강력한 규칙 제정과 노동조합 역할의 활성화 등을 통해 비정규직 근로자 처우 개선을 해야 한다.`,
+              description: `비정규직과 파트타임 다양한 형태의 노동계약과 일자리를 늘리는 것은 현 산업구조에서 필연적이다.` + `문제는 비정규직이 값싼 노동력과 노동착취를 의미하는 단어가 되어 버린 현실에 있다. 노동계약 상태에 대한 정부의 강력한 규칙 제정과 노동조합 역할의 활성화 등을 통해 비정규직 근로자 처우 개선을 해야 한다.`,
               where: `가톨릭 평화방송 라디오 <열린세상 오늘! 김성덕입니다>와의 인터뷰 中`,
               type: `발언`,
 
@@ -278,8 +278,8 @@
             }, {
               summary: `“청년 창업 활성화”`,
               description: `구직에서 창직으로의 일자리 창출 패러다임을 변화하는 시도를 통해 청년 실업률을 낮추고, 도내 지식서비스 산업 육성 기반을 확충 ➜ 청년창업을 통한 신규 고용 창출 유도 및 지역 경제 활성화`,
-              where: `청년 CEO 500프로젝트 (2015)`,
-              type: `충남도정책`,
+              where: `충남도 정책:청년 CEO 500프로젝트 (2015)`,
+              type: `정책`,
 
               links: {
                 asiae: `http://m.asiae.co.kr/view.htm?no=2013061208060144699#ba`
@@ -287,8 +287,8 @@
             }, {
               summary: `“중소기업 성장 지원”`,
               description: `중앙정부 및 전국 지자체의 창업 지원프로그램 중 기업 설립 후 3년 이내 지원프로그램이 없어 중소기업 단계까지 성장에 어려움을 겪는 것을 해소하고자, 창업 후 2~3년 이내의 기업을 대상으로 판로개척, 브랜드 인지도 제고 등을 통해 중소기업화 지원 ➜ 민선 6기 4년 동안 100개 기업 중소기업화 지원`,
-              where: `작은 브랜드 100개 찾기 (청년창업) 프로젝트 (2015)`,
-              type: `충남도정책`,
+              where: `충남도 정책:작은 브랜드 100개 찾기 (청년창업) 프로젝트 (2015)`,
+              type: `정책`,
 
               links: {},
             }],
@@ -1304,59 +1304,6 @@
     left: 0.8em;
   }
 
-  @media screen and (min-width: 45em) {
-    .policys {
-      -moz-column-count: 2;
-      -webkit-column-count: 2;
-      column-count: 2;
-    }
-    .logo {
-      background-image: url('/src/assets/img/logo-l.png');
-      width: 127px;
-      height: 127px;
-    }
-    .top-text {
-      margin-bottom: 1em;
-      padding: 0.2em;
-      font-size: 2.5em;
-      left: auto;
-      right: 1em;
-      bottom: 3em;
-    }
-    .bottom-text {
-      padding: 0.2em;
-      left: auto;
-      font-size: 2.5em;
-      right: 1em;
-      bottom: 2em;
-    }
-    .top {
-      width: 100vw;
-      height: 541px;
-    }
-    #backmoon {
-      background-image: url('/src/assets/img/backmoon-l.png');
-    }
-    #backjung {
-      background-image: url('/src/assets/img/backjung-l.png');
-    }
-    #backyou {
-      background-image: url('/src/assets/img/backyou-l.png');
-    }
-    #backsim {
-      background-image: url('/src/assets/img/backsim-l.png');
-    }
-    #backnam {
-      background-image: url('/src/assets/img/backnam-l.png');
-    }
-    #backlee {
-      background-image: url('/src/assets/img/backlee-l.png');
-    }
-    #backahn {
-      background-image: url('/src/assets/img/backahn-l.png');
-    }
-  }
-
   .policys {
     padding: 10px;
   }
@@ -1408,5 +1355,116 @@
     background-image: linear-gradient(#0081C2 1px, transparent 1px), linear-gradient(90deg, #269 1px, transparent 1px);
     background-size: 30px 30px, 30px 30px;
     min-height: 100vh;
+  }
+
+  @media screen and (min-width: 46em) {
+    .policys {
+      -moz-column-count: 2;
+      -webkit-column-count: 2;
+      column-count: 2;
+    }
+    .logo {
+      background-image: url('/src/assets/img/logo-l.png');
+      width: 127px;
+      height: 127px;
+    }
+    .top-text {
+      margin-bottom: 1em;
+      padding: 0.2em;
+      font-size: 2.5em;
+      left: auto;
+      right: 1em;
+      bottom: 2.8em;
+    }
+    .bottom-text {
+      padding: 0.2em;
+      left: auto;
+      font-size: 2.5em;
+      right: 1em;
+      bottom: 2em;
+    }
+    .top {
+      width: 100vw;
+      height: 541px;
+    }
+    .character-image {
+      position: absolute;
+      right: 3em;
+      bottom: 15em;
+      left: auto;
+    }
+    #characterjung {
+      background-image: url('/src/assets/img/tubejung-m.png');
+      width: 89px;
+      height: 134px;
+    }
+    #characteryou {
+      background-image: url('/src/assets/img/tubeyou-m.png');
+      width: 94px;
+      height: 131px;
+    }
+    #characterlee {
+      background-image: url('/src/assets/img/tubelee-m.png');
+      width: 102px;
+      height: 129px;
+    }
+    #charactermoon {
+      background-image: url('/src/assets/img/tubemoon-m.png');
+      width: 91px;
+      height: 130px;
+    }
+    #charactersim {
+      background-image: url('/src/assets/img/tubesim-m.png');
+      width: 85px;
+      height: 132px;
+    }
+    #characterahn {
+      background-image: url('/src/assets/img/tubeahn-m.png');
+      width: 92px;
+      height: 127px;
+    }
+    #characternam {
+      background-image: url('/src/assets/img/tubenam-m.png');
+      width: 89px;
+      height: 134px;
+    }
+    #backmoon {
+      background-image: url('/src/assets/img/backmoon-l.png');
+    }
+    #backjung {
+      background-image: url('/src/assets/img/backjung-l.png');
+    }
+    #backyou {
+      background-image: url('/src/assets/img/backyou-l.png');
+    }
+    #backsim {
+      background-image: url('/src/assets/img/backsim-l.png');
+    }
+    #backnam {
+      background-image: url('/src/assets/img/backnam-l.png');
+    }
+    #backlee {
+      background-image: url('/src/assets/img/backlee-l.png');
+    }
+    #backahn {
+      background-image: url('/src/assets/img/backahn-l.png');
+    }
+  }
+
+  @media screen and (min-width: 80em) {
+    .policys {
+      -moz-column-count: 3;
+      -webkit-column-count: 3;
+      column-count: 3;
+    }
+    .top-text {
+      right: 5em;
+    }
+    .bottom-text {
+      right: 5em;
+    }
+    .character-image {
+      right: 12em;
+    }
   }
 </style>

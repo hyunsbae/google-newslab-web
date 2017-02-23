@@ -214,26 +214,6 @@
   }
   /* iphone7 */
 
-  @media all and (device-width: 375px) and (device-height: 667px) and (orientation:portrait) {
-    #background {
-      height: 667px;
-    }
-    #water {
-      width: 375px;
-      height: 900px;
-    }
-  }
-
-  @media all and (device-width: 375px) and (device-height: 667px) and (orientation:landscape) {
-    #background {
-      height: 667px;
-    }
-    #water {
-      width: 375px;
-      height: 900px;
-    }
-  }
-
   .loading-enter-active {
     -webkit-transition: all 3s ease-out;
     -moz-transition: all 3s ease-out;
@@ -314,7 +294,7 @@
     z-index: 0;
   }
 
-  @media screen and (min-width: 60em) {
+  @media screen and (min-width: 45em) {
     #ahn {
       background-image: url("/src/assets/img/ahn-l.png");
       width: 112px;
@@ -354,10 +334,52 @@
       background-image: url('/src/assets/img/pool-l.png');
       width: 675px;
       height: 478px;
-      display: inline-block;
+      margin-top: 15%;
+      margin-bottom: .5em;
+    }
+    .name {
+      font-size: 1.5em;
+      margin-top: .35em;
+    }
+    .googlexkbs {
+      font-size: 1.5em;
+      bottom: 1em;
+    }
+  }
+
+  @media screen and (min-width: 80em) {
+    .pool {
       position: absolute;
-      left: 10%;
-      top: 15%
+      top: 50%;
+      margin-top: -239px;
+      left: 5%;
+    }
+    #all {
+      position: absolute;
+      top: 50%;
+      right: 5%;
+      margin-top: -150px;
+    }
+
+  }
+
+  @media all and (device-width: 375px) and (device-height: 667px) and (orientation:portrait) {
+    #background {
+      height: 667px;
+    }
+    #water {
+      width: 375px;
+      height: 900px;
+    }
+  }
+
+  @media all and (device-width: 375px) and (device-height: 667px) and (orientation:landscape) {
+    #background {
+      height: 667px;
+    }
+    #water {
+      width: 375px;
+      height: 900px;
     }
   }
 </style>

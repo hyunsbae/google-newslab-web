@@ -4,7 +4,7 @@
       <div class="summary-button"> {{type}} </div>
       <div class="summary"> {{summary}} </div>
     </div>
-    <div class="description" v-if="show">{{ description }} <a class="links" v-for="(link, key, index) in links" :href="link">더보기</a>
+    <div class="description" v-if="show">{{ description }}<a class="links" v-for="(link, key, index) in links" :href="link">더보기</a>
     </div>
     <div class="where" v-if="!show">{{where}}</div>
   </div>
