@@ -352,12 +352,12 @@
       position: absolute;
       top: 50%;
       margin-top: -239px;
-      left: 5%;
+      left: 3%;
     }
     #all {
       position: absolute;
       top: 50%;
-      right: 5%;
+      right: 3%;
       margin-top: -150px;
     }
 

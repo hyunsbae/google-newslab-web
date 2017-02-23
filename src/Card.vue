@@ -4,7 +4,7 @@
       <div class="summary-button"> {{type}} </div>
       <div class="summary"> {{summary}} </div>
     </div>
-    <div class="description" v-if="show">{{ description }}<a class="links" v-for="(link, key, index) in links" :href="link">더보기</a>
+    <div class="description" v-if="show">{{ description }}<a class="link" v-for="(link, key, index) in links" :href="link">더보기</a>
     </div>
     <div class="where" v-if="!show">{{where}}</div>
   </div>
@@ -40,6 +40,11 @@
   .card:hover {
     background: #0081C2;
     color: white
+
+  }
+
+  .card:focus, .card:hover .link{
+    color: white;
   }
 
   .card {
@@ -73,12 +78,14 @@
     margin-top: 1em;
   }
 
-  .links {
+  .link {
     font-size: 17.5px;
     line-height: 26px;
     letter-spacing: -0.03em;
     font-weight: 300;
-    color: white;
+    color: black;
+    font-weight: 500;
+    margin-left: .4em;
   }
 
   .where {
