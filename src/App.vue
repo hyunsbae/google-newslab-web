@@ -348,7 +348,7 @@
     }
   }
 
-  @media screen and (min-width: 80em) {
+  @media screen and (min-width: 77em) {
     .pool {
       position: absolute;
       top: 50%;
@@ -362,7 +362,7 @@
       margin-top: -150px;
     }
     .container {
-      margin-left: .5em;
+      margin-left: .3em;
     }
   }
 
