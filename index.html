@@ -4,11 +4,52 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="fb:app_id" content="1791023537829951" />
+  <meta property="og:url" content="http://stagekk.org/game/" />
+  <meta property="og:title" content="대통령 담그기" />
+  <meta property="og:description" content="대선 후보들의 청년 정책/공약/발언을 한번에 보아요 (*･ω･)ﾉ" />
   <title>대통령 담그기</title>
   <link rel="stylesheet" type="text/css" href="/src/assets/css/main.css">
   <link rel="stylesheet" type="text/css" href="/src/assets/css/animate.css">
   <script src="https://gstatic.com/firebasejs/3.5.2/firebase.js"></script>
   <script src="https://unpkg.com/vuefire/dist/vuefire.js"></script>
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-90725872-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+  <script>
+    window.fbAsyncInit = function () {
+      FB.init({
+        appId: '1791023537829951',
+        xfbml: true,
+        version: 'v2.8'
+      });
+      FB.AppEvents.logPageView();
+    };
+
+    (function (d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) {
+        return;
+      }
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
 </head>
 
 <body>
@@ -17,7 +58,6 @@
       <router-view></router-view>
     </transition>
   </div>
-
   <script src="/dist/build.js"></script>
 </body>
 
