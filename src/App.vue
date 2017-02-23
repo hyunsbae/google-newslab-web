@@ -7,39 +7,39 @@
     <div class="logo"></div>
     <div class="images">
       <div class="pool">
-        <div v-if="go" class="swimming">
+        <div v-for="key in keys" v-if="selected === key && go" :id="'swimming' + key" class="swimming">
         </div>
       </div>
     </div>
     <div id="all">
       <div class="images">
-        <div class="container" @mousedown="selected = 'ahn'; moveToCandidatePage();">
+        <div class="container" @click="selected = 'ahn'; moveToCandidatePage();">
           <div id="ahn"></div>
           <div class="name">안철수</div>
         </div>
-        <div class="container" @mousedown="selected = 'sim'; moveToCandidatePage();">
+        <div class="container" @click="selected = 'sim'; moveToCandidatePage();">
           <div id="sim"></div>
           <div class="name">심상정</div>
         </div>
-        <div class="container" @mousedown="selected = 'moon'; moveToCandidatePage();">
+        <div class="container" @click="selected = 'moon'; moveToCandidatePage();">
           <div id="moon" src="/src/assets/img/moon-s.png"></div>
           <div class="name">문재인</div>
         </div>
-        <div class="container" @mousedown="selected = 'jung'; moveToCandidatePage();">
+        <div class="container" @click="selected = 'jung'; moveToCandidatePage();">
           <div id="jung" src="/src/assets/img/jung-s.png"></div>
           <div class="name">안희정</div>
         </div>
       </div>
       <div class="images">
-        <div class="container" @mousedown="selected = 'lee'; moveToCandidatePage();">
+        <div class="container" @click="selected = 'lee'; moveToCandidatePage();">
           <div id="lee" src="/src/assets/img/lee-s.png"></div>
           <div class="name">이재명</div>
         </div>
-        <div class="container" @mousedown="selected = 'nam'; moveToCandidatePage();">
+        <div class="container" @click="selected = 'nam'; moveToCandidatePage();">
           <div id="nam" src="/src/assets/img/nam-s.png"></div>
           <div class="name">남경필</div>
         </div>
-        <div class="container" @mousedown="selected = 'you'; moveToCandidatePage();">
+        <div class="container" @click="selected = 'you'; moveToCandidatePage();">
           <div id="you" src="/src/assets/img/you-s.png"></div>
           <div class="name">유승민</div>
         </div>
@@ -57,6 +57,15 @@
         go: false,
         show: false,
         colorChanged: false,
+        keys: [
+          'moon',
+          'jung',
+          'lee',
+          'ahn',
+          'nam',
+          'you',
+          'sim',
+        ],
       }
     },
     methods: {
@@ -88,15 +97,52 @@
   }
 
   .swimming {
-    background-image: url('/src/assets/img/tubejung-m.png');
-    margin: auto;
+    margin: 0 auto;
     right: 0;
     left: 0;
-    top: 0;
-    bottom: 0;
+    margin-top: 40px;
+  }
+
+  #swimmingjung {
+    background-image: url('/src/assets/img/tubejung-m.png');
     width: 89px;
     height: 134px;
-    margin-top: 40px;
+  }
+
+  #swimminglee {
+    background-image: url('/src/assets/img/tubelee-m.png');
+    width: 102px;
+    height: 129px;
+  }
+
+  #swimmingsim {
+    background-image: url('/src/assets/img/tubesim-m.png');
+    width: 85px;
+    height: 132px;
+  }
+
+  #swimmingnam {
+    background-image: url('/src/assets/img/tubenam-m.png');
+    width: 89px;
+    height: 134px;
+  }
+
+  #swimmingmoon {
+    background-image: url('/src/assets/img/tubemoon-m.png');
+    width: 91px;
+    height: 130px;
+  }
+
+  #swimmingyou {
+    background-image: url('/src/assets/img/tubeyou-m.png');
+    width: 94px;
+    height: 131px;
+  }
+
+  #swimmingahn {
+    background-image: url('/src/assets/img/tubeahn-m.png');
+    width: 92px;
+    height: 127px;
   }
 
   .loading {

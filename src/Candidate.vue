@@ -2,7 +2,7 @@
   <div class="background">
     <a class="logo" href="/"></a>
     <div v-for="key in keys" v-if="$route.params.name === key" :id="'back' + key" class="top">
-      <div class="top-image"></div>
+      <div :id="'character' +key" class="character-image"></div>
       <div class="top-text ">{{ messages[$route.params.name].up }}</div>
       <div class="bottom-text ">{{ messages[$route.params.name].down }}</div>
     </div>
@@ -1231,13 +1231,52 @@
     height: 464px;
   }
 
-  .top-image {
-    width: 46px;
-    height: 69px;
+  .character-image {
     position: absolute;
-    background-image: url('/src/assets/img/tubejung-s.png');
     bottom: 9em;
     left: 1.3em;
+  }
+
+  #characterjung {
+    background-image: url('/src/assets/img/tubejung-s.png');
+    width: 46px;
+    height: 69px;
+  }
+
+  #characteryou {
+    background-image: url('/src/assets/img/tubeyou-s.png');
+    width: 46px;
+    height: 69px;
+  }
+
+  #characterlee {
+    background-image: url('/src/assets/img/tubelee-s.png');
+    width: 46px;
+    height: 69px;
+  }
+
+  #charactermoon {
+    background-image: url('/src/assets/img/tubemoon-s.png');
+    width: 46px;
+    height: 69px;
+  }
+
+  #charactersim {
+    background-image: url('/src/assets/img/tubesim-s.png');
+    width: 46px;
+    height: 69px;
+  }
+
+  #characterahn {
+    background-image: url('/src/assets/img/tubeahn-s.png');
+    width: 46px;
+    height: 69px;
+  }
+
+  #characternam {
+    background-image: url('/src/assets/img/tubenam-s.png');
+    width: 46px;
+    height: 69px;
   }
 
   .top-text {
