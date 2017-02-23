@@ -200,6 +200,7 @@
     background-image: linear-gradient(#0081C2 1px, transparent 1px), linear-gradient(90deg, #0081C2 1px, transparent 1px);
     background-size: 30px 30px, 30px 30px;
     min-width: 340px;
+    min-height: 600px;
     height: 100vh;
     font-family: 'Noto Sans Korean' sans-serif;
   }
@@ -286,12 +287,18 @@
     line-height: 16px;
     font-size: 13px;
     font-weight: bold;
-    bottom: 10px;
     margin: 0 auto;
+    bottom: -25px;
     left: 0;
     right: 0;
     text-decoration: none;
     z-index: 0;
+  }
+
+  @media screen and (min-width: 350px) {
+    .googlexkbs {
+      bottom: 10px;
+    }
   }
 
   @media screen and (min-width: 45em) {
