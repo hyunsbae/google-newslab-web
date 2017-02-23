@@ -199,7 +199,7 @@
     background-color: white;
     background-image: linear-gradient(#0081C2 1px, transparent 1px), linear-gradient(90deg, #0081C2 1px, transparent 1px);
     background-size: 30px 30px, 30px 30px;
-    min-width: 320px;
+    min-width: 340px;
     height: 100vh;
     font-family: 'Noto Sans KR';
   }
@@ -213,7 +213,6 @@
     bottom: -100px;
     z-index: 1;
   }
-  /* iphone7 */
 
   .loading-enter-active {
     -webkit-transition: all 3s ease-out;
@@ -345,6 +344,7 @@
     .googlexkbs {
       font-size: 1.5em;
       bottom: 1em;
+      display: none;
     }
   }
 
@@ -366,6 +366,7 @@
     }
   }
 
+  /* iphone7 */
   @media all and (device-width: 375px) and (device-height: 667px) and (orientation:portrait) {
     #background {
       height: 667px;
@@ -383,6 +384,27 @@
     #water {
       width: 375px;
       height: 900px;
+    }
+  }
+
+   /* iphoneSE */
+  @media all and (device-width: 320px) and (device-height: 568px) and (orientation:portrait) {
+    #background {
+      height: 568px;
+    }
+    #water {
+      width: 320px;
+      height: 700px;
+    }
+  }
+
+  @media all and (device-width: 320px) and (device-height: 568px) and (orientation:landscape) {
+    #background {
+      height: 568px;
+    }
+    #water {
+      width: 320px;
+      height: 700px;
     }
   }
 </style>
