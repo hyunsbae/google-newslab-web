@@ -168,6 +168,7 @@
 
   .container {
     display: inline-block;
+    cursor: pointer;
   }
 
   .pool {
@@ -360,7 +361,9 @@
       right: 3%;
       margin-top: -150px;
     }
-
+    .container {
+      margin-left: .5em;
+    }
   }
 
   @media all and (device-width: 375px) and (device-height: 667px) and (orientation:portrait) {
