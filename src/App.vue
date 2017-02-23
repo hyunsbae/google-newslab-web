@@ -160,7 +160,7 @@
   .name {
     display: inline-block;
     font-weight: bold;
-    font-family: 'Noto Sans Korean';
+    font-family: 'Noto Sans Korean' sans-serif;
     font-size: 1em;
     color: #0081c2;
     margin-top: .2em;
@@ -201,7 +201,7 @@
     background-size: 30px 30px, 30px 30px;
     min-width: 340px;
     height: 100vh;
-    font-family: 'Noto Sans KR';
+    font-family: 'Noto Sans Korean' sans-serif;
   }
 
   #water {
@@ -346,6 +346,41 @@
       bottom: 1em;
       display: none;
     }
+    #swimmingjung {
+      background-image: url('/src/assets/img/tubejung-m.png');
+      width: 89px;
+      height: 134px;
+    }
+    #swimminglee {
+      background-image: url('/src/assets/img/tubelee-m.png');
+      width: 102px;
+      height: 129px;
+    }
+    #swimmingsim {
+      background-image: url('/src/assets/img/tubesim-m.png');
+      width: 85px;
+      height: 132px;
+    }
+    #swimmingnam {
+      background-image: url('/src/assets/img/tubenam-m.png');
+      width: 89px;
+      height: 134px;
+    }
+    #swimmingmoon {
+      background-image: url('/src/assets/img/tubemoon-m.png');
+      width: 91px;
+      height: 130px;
+    }
+    #swimmingyou {
+      background-image: url('/src/assets/img/tubeyou-m.png');
+      width: 94px;
+      height: 131px;
+    }
+    #swimmingahn {
+      background-image: url('/src/assets/img/tubeahn-m.png');
+      width: 92px;
+      height: 127px;
+    }
   }
 
   @media screen and (min-width: 77em) {
@@ -366,7 +401,19 @@
     }
   }
 
+  @media screen and (min-width: 90em) {
+    .pool {
+      left: 8%;
+    }
+    #all {
+      right: 8%;
+    }
+    .container {
+      margin-left: .5em;
+    }
+  }
   /* iphone7 */
+
   @media all and (device-width: 375px) and (device-height: 667px) and (orientation:portrait) {
     #background {
       height: 667px;
@@ -386,8 +433,8 @@
       height: 900px;
     }
   }
+  /* iphoneSE */
 
-   /* iphoneSE */
   @media all and (device-width: 320px) and (device-height: 568px) and (orientation:portrait) {
     #background {
       height: 568px;

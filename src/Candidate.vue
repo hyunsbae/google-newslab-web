@@ -29,7 +29,7 @@
       return {
         selected: 'all',
         names: {
-          moon: '문제인으로 게임하기',
+          moon: '문재인으로 게임하기',
           jung: '안희정으로 게임하기',
           lee: '이재명으로 게임하기',
           ahn: '안철수로 게임하기',
@@ -1283,7 +1283,7 @@
     margin-bottom: 0.5em;
     background-color: #FFC03B;
     padding: 0.2em;
-    font-family: 'Noto Sans Korean';
+    font-family: 'Noto Sans Korean' sans-serif;
     position: absolute;
     color: white;
     font-size: 1.5em;
@@ -1295,7 +1295,7 @@
   .bottom-text {
     background-color: #FFC03B;
     padding: 0.2em;
-    font-family: 'Noto Sans Korean';
+    font-family: 'Noto Sans Korean' sans-serif;
     position: absolute;
     color: white;
     font-size: 1.5em;

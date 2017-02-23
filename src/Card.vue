@@ -57,7 +57,7 @@
     vertical-align: middle;
     margin-bottom: 1.5em;
     background-color: #EDEDED;
-    font-family: 'Noto Sans KR';
+    font-family: 'Noto Sans KR' sans-serif;
     box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.17);
   }
 
