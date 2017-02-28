@@ -394,6 +394,10 @@
       left: 0;
       margin-top: 10em;
     }
+    #background {
+      min-height: 100vh;
+      height: auto;
+    }
   }
 
   @media screen and (min-width: 77em) {
